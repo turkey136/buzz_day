@@ -30,4 +30,9 @@ cd docker-compose
 docker-compose run --rm php php artisan command:scrapingYoutube
 ```
 
-composer create-project "laravel/laravel=9.\*" ./
+- ページ追加後
+
+```
+cd docker-compose
+docker-compose run --rm php ./script/clear_cache.sh
+```

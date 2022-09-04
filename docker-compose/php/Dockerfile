@@ -4,16 +4,19 @@ FROM ubuntu:20.04
 ENV TZ=Asia/Tokyo
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
-RUN apt-get update && apt-get install git vim curl lsb-release ca-certificates apt-transport-https software-properties-common -y
-RUN add-apt-repository ppa:ondrej/php && apt-get update
+# install git, vim, curl, apatche, php7.x, node, npm, composer
+RUN apt-get update && \
+  apt-get install git vim curl \
+  apache2 \
+  php libapache2-mod-php php-mbstring php-cli php-bcmath php-json php-xml php-zip php-pdo php-common php-tokenizer php-mysql php-curl php-gd php-soap php-xmlrpc \
+  nodejs \
+  npm -y && \
+  curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer && \
+  npm install n -g && n stable && apt purge -y nodejs npm
 
-# install apatche, php8.1, node, npm
-RUN apt-get install apache2 php8.1 nodejs npm -y
+# apatche Pass of AH00558
+RUN echo "ServerName localhost" | tee /etc/apache2/conf-available/fqdn.conf && a2enconf fqdn && a2enmod rewrite
 
 WORKDIR /var/www/html
-
-# install composer
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-
 EXPOSE 80
 CMD ["apachectl", "-D", "FOREGROUND"]
