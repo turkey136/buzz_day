@@ -37,6 +37,7 @@
             .thumbnail {
               width: 100%;
               aspect-ratio: 16 / 9;
+              z-index: 2;
             }
             @media (max-width: 800px) {
               .tooltips {
@@ -50,12 +51,13 @@
                 border-radius: 0.5em;
                 white-space: normal;
                 width: auto;
+                z-index: 9;
               }
             }
              @media (min-width: 801px) {
               .tooltips {
                 display: none;
-                position: absolute;
+                position: static;
                 bottom: -7.5em;
                 z-index: 1000;
                 padding: 0.5em;
@@ -64,13 +66,14 @@
                 border-radius: 0.5em;
                 white-space: normal;
                 width: 300px;
+                z-index: 9;
               }
             }
             .tooltips:after {
               width: 100%;
               content: "";
               display: block;
-              position: absolute;
+              position: static;
               left: 0.5em;
               top: -8px;
               border-top:8px solid transparent;
@@ -108,10 +111,13 @@
             for (let key in videos) {
               events.push({start: key, textColor: '#000000', title: key });
             };
-            var today = 'YYYY-MM-DD';
-            today = today.replace(/YYYY/, new Date().getFullYear());
-            today = today.replace(/MM/,  String(new Date().getMonth() + 1).padStart(2, '0'));
-            today = today.replace(/DD/,   String(new Date().getDate())).padStart(2, '0');
+            var today = new Date();
+            today = today
+              .toLocaleDateString("ja-JP", {
+                year: "numeric",
+                month: "2-digit",
+                day: "2-digit",
+              }).split("/").join("-");
 
             var calendarEl = document.getElementById('calendar');
             var calendar = new FullCalendar.Calendar(calendarEl, {
@@ -125,9 +131,13 @@
               eventColor: '#FFFFFF',
               eventContent: function (info) {
                 var data = videos[info.event.title]
+                console.log('-------')
                 var video = `
-                  <a href="https://www.youtube.com/watch?v=${ data['videoId'] }" target="_blank">
-                    <img class="thumbnail" src="https://img.youtube.com/vi/${  data['videoId'] }/default.jpg"/>
+                  <a href="https://www.youtube.com/watch?v=${ data['videoId'] }"
+                     target="_blank"
+                     class="${ today === info.event.title ? 'today' : '' }">
+
+                    <img class="thumbnail" src="https://img.youtube.com/vi/${  data['videoId'] }/mqdefault.jpg"/>
                   </a>
                   <p class="video_name ${ today === info.event.title ? 'today' : '' }">
                     ${ data['channelName'] }
