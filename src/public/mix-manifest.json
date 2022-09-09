@@ -1,6 +1,6 @@
 {
-    "/js/app.js": "/js/app.js?id=ce72306abfda9d374aeb9fd40f716e3a",
-    "/js/buzzTube.js": "/js/buzzTube.js?id=e82041f5adb8ea9141aff566eea295bb",
-    "/css/buzzTube.css": "/css/buzzTube.css?id=87677e323fd4dbcb7c4e99e4653f20f4",
-    "/css/app.css": "/css/app.css?id=68b329da9893e34099c7d8ad5cb9c940"
+    "/js/buzzTube.js": "/js/buzzTube.js",
+    "/js/top.js": "/js/top.js",
+    "/css/top.css": "/css/top.css",
+    "/css/buzzTube.css": "/css/buzzTube.css"
 }

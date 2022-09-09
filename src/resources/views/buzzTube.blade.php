@@ -4,13 +4,13 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Cache-Control" content="no-cache">
-        <meta name="keywords" content="">
+        <meta name="keywords" content="youtube,YouTube,急上昇,人気">
         <title>YouTube 昨日の急上昇 Video</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-        <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.3.0/main.min.css' rel='stylesheet' />
-        <link rel="stylesheet" href="{{ mix('css/buzzTube.css') }}" />
-        <script src="{{ mix('/js/buzzTube.js') }}"></script>
+        <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.3.0/main.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="/css/buzzTube.css">
+        <script src="/js/buzzTube.js"></script>
         <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.3.0/main.min.js'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     </head>
