@@ -17,5 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/buzz_tube', function () {
-    return view('buzz_tube');
+    return view('buzzTube');
 });
