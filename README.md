@@ -14,6 +14,7 @@ cd docker-compose
 docker-compose run --rm php composer install
 docker-compose run --rm php npm install
 docker-compose run --rm php php artisan storage:link
+docker-compose run --rm php npm run dev
 ```
 
 - docker コンテナの起動
@@ -35,4 +36,5 @@ docker-compose run --rm php php artisan command:scrapingYoutube
 ```
 cd docker-compose
 docker-compose run --rm php ./script/clear_cache.sh
+docker-compose run --rm php npm run dev
 ```

@@ -1,0 +1,49 @@
+.fotter-link {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-color {
+  background-color: black;
+}
+
+html,
+body {
+  background-color: #fff;
+  color: #636b6f;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 200;
+  margin: 0;
+}
+
+.flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.position-ref {
+  position: relative;
+  max-width: 90%;
+  padding-left: 5%;
+}
+
+.content {
+  text-align: center;
+}
+
+.title {
+  font-size: 60px;
+  margin-bottom: 60px;
+  min-width: 400px;
+}
+
+.youtube-vist-link {
+  text-align: right;
+  color: red;
+  text-decoration: none;
+}
+
+.sub-title {
+  text-align: left;
+}
