@@ -40,6 +40,6 @@ docker-compose run --rm php php artisan command:scrapingNiconico
 
 ```
 cd docker-compose
-docker-compose run --rm php ./script/clear_cache.sh
 docker-compose run --rm php npm run dev
+docker-compose run --rm php ./script/clear_cache.sh
 ```
