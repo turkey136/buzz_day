@@ -5,13 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Cache-Control" content="no-cache">
         <meta name="keywords" content="youtube,YouTube,急上昇,人気">
-        <title>YouTube 昨日の急上昇 Video</title>
+        <title>ニコニコ動画 昨日の急上昇 Video</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.3.0/main.min.css' rel='stylesheet'>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" href="/css/buzzTube.css">
-        <script src="/js/buzzTube.js"></script>
+        <link rel="stylesheet" href="/css/buzzNico.css">
+        <script src="/js/buzzNico.js"></script>
         <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.3.0/main.min.js'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     </head>
@@ -19,9 +19,9 @@
         <div class="flex-center position-ref">
             <div class="content">
                 <div class="title m-b-md">
-                    <img class="youtube-icon"
-                         src="/img/youtube.jpg"
-                         alt="赤い再生ボタン">
+                    <img class="niconico-icon"
+                         src="/img/niconico.jpg"
+                         alt="レトロテレビ">
                     <span class="title-str">昨日の急上昇 Video</span>
                 </div>
                 <div id='calendar' class="calendar"></div>
