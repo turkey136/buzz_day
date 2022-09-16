@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('top');
+Route::get('/buzz_top', function () {
+    return view('buzzTop');
 });
 Route::get('/buzz_tube', function () {
     return view('buzzTube');

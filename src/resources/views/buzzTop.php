@@ -8,9 +8,9 @@
         <title>BuzzTube 昨日の急上昇 Video</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-        <link rel="stylesheet" href="/css/top.css">
+        <link rel="stylesheet" href="/css/buzzTop.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <script src="/js/top.js"></script>
+        <script src="/js/buzzTop.js"></script>
     </head>
     <body>
         <div class="flex-center position-ref">
