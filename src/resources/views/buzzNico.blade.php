@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta http-equiv="Cache-Control" content="no-store">
         <meta name="keywords" content="youtube,YouTube,急上昇,人気">
         <title>ニコニコ動画 昨日の急上昇 Video</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -26,7 +26,7 @@
                 </div>
                 <div id='calendar' class="calendar"></div>
                 <div>
-                  <a class="waves-effect waves-light btn back-button"  href="/">
+                  <a class="waves-effect waves-light btn back-button"  href="/buzz_top">
                     <i class="material-icons left">arrow_back</i> Back
                   </a>
                 </div>

@@ -11,6 +11,9 @@ const mix = require('laravel-mix');
  |
  */
 
+// Top
+mix.postCss('resources/css/top.css', 'public/css', []);
+
 // Youtube
 mix.js('resources/js/buzzTube.js', 'public/js');
 mix.postCss('resources/css/buzzTube.css', 'public/css', []);
@@ -19,6 +22,6 @@ mix.postCss('resources/css/buzzTube.css', 'public/css', []);
 mix.js('resources/js/buzzNico.js', 'public/js');
 mix.postCss('resources/css/buzzNico.css', 'public/css', []);
 
-// Top
-mix.js('resources/js/top.js', 'public/js');
-mix.postCss('resources/css/top.css', 'public/css', []);
+// Video Top
+mix.js('resources/js/buzzTop.js', 'public/js');
+mix.postCss('resources/css/buzzTop.css', 'public/css', []);

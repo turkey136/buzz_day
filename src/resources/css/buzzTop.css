@@ -38,6 +38,22 @@ body {
   min-width: 400px;
 }
 
+.youtube-vist-link {
+  text-decoration: none;
+}
+.youtube-link-str {
+  color: red;
+}
+
+.niconico-vist-link {
+  color: black;
+  text-decoration: none;
+}
+
+.sub-title {
+  text-align: left;
+}
+
 .spinner-black-only {
   border-color: black;
 }
