@@ -14,7 +14,7 @@ cd docker-compose
 docker-compose run --rm php composer install
 docker-compose run --rm php npm install
 docker-compose run --rm php php artisan storage:link
-docker-compose run --rm php npm run dev
+docker-compose run --rm php npm run prd
 ```
 
 - docker コンテナの起動
@@ -42,4 +42,10 @@ docker-compose run --rm php php artisan command:scrapingNiconico
 cd docker-compose
 docker-compose run --rm php npm run dev
 docker-compose run --rm php ./script/clear_cache.sh
+```
+
+- バッチの設定反映
+
+```
+artisan schedule:run
 ```
