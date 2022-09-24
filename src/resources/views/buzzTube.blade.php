@@ -26,7 +26,7 @@
                 </div>
                 <div id='calendar' class="calendar"></div>
                 <div>
-                  <a class="waves-effect waves-light btn back-button"  href="/">
+                  <a class="waves-effect waves-light btn back-button"  href="/buzz_top">
                     <i class="material-icons left">arrow_back</i> Back
                   </a>
                 </div>

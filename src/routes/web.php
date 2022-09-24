@@ -22,3 +22,7 @@ Route::get('/buzz_tube', function () {
 Route::get('/buzz_nico', function () {
     return view('buzzNico');
 });
+
+Route::get('/', function () {
+    return view('top');
+});
