@@ -19,3 +19,6 @@ Route::get('/', function () {
 Route::get('/buzz_tube', function () {
     return view('buzzTube');
 });
+Route::get('/buzz_nico', function () {
+    return view('buzzNico');
+});

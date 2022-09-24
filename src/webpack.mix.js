@@ -15,6 +15,10 @@ const mix = require('laravel-mix');
 mix.js('resources/js/buzzTube.js', 'public/js');
 mix.postCss('resources/css/buzzTube.css', 'public/css', []);
 
+// Niconico
+mix.js('resources/js/buzzNico.js', 'public/js');
+mix.postCss('resources/css/buzzNico.css', 'public/css', []);
+
 // Top
 mix.js('resources/js/top.js', 'public/js');
 mix.postCss('resources/css/top.css', 'public/css', []);

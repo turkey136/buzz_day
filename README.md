@@ -24,17 +24,22 @@ cd docker-compose
 docker-compose up
 ```
 
-- 今日の YouTube 急上昇の取得
+- 今日の急上昇の取得
 
 ```
 cd docker-compose
+
+# Youtube
 docker-compose run --rm php php artisan command:scrapingYoutube
+
+# ニコニコ動画
+docker-compose run --rm php php artisan command:scrapingNiconico
 ```
 
 - ページ追加後
 
 ```
 cd docker-compose
-docker-compose run --rm php ./script/clear_cache.sh
 docker-compose run --rm php npm run dev
+docker-compose run --rm php ./script/clear_cache.sh
 ```

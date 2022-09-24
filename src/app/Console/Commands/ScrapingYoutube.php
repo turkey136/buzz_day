@@ -20,7 +20,7 @@ class ScrapingYoutube extends Command
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = '今日の急上昇動画の取得';
 
     /**
      * Execute the console command.
@@ -59,7 +59,7 @@ class ScrapingYoutube extends Command
         $client = new Google_Client();
         $client->setDeveloperKey(env('YOUTUBE_KEY'));
         $youtube = new Google_Service_YouTube($client);
-         $part = ['snippet'];
+        $part = ['snippet'];
         $params = [
             'chart' => 'mostPopular',
             'maxResults' => 1,
