@@ -22,6 +22,10 @@ mix.postCss('resources/css/buzzTube.css', 'public/css', []);
 mix.js('resources/js/buzzNico.js', 'public/js');
 mix.postCss('resources/css/buzzNico.css', 'public/css', []);
 
+// 投資信託
+mix.js('resources/js/investmentTrust.js', 'public/js');
+mix.postCss('resources/css/investmentTrust.css', 'public/css', []);
+
 // Video Top
 mix.js('resources/js/buzzTop.js', 'public/js');
 mix.postCss('resources/css/buzzTop.css', 'public/css', []);

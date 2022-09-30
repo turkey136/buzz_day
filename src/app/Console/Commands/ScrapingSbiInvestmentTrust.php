@@ -40,10 +40,12 @@ class ScrapingSbiInvestmentTrust extends Command
         $csv_download_response = $client->getResponse()->getContent();
 
         // file 出力
-        $csvDir = base_path('storage/app/public/sbi_investment_trust/' . date("Y") . '/' .  date("m"));
-        mkdir($csvDir, 0777, true);
+        $csvDir = base_path('storage/app/public/sbi_investment_trust/' . date("Y") . "/" .  date("m"));
+        if (! file_exists($csvDir)) {
+          mkdir($csvDir, 0777, true);
+        }
         $csvFilePath = $csvDir . '/' . date("Ymd") . '.csv';
-        file_put_contents($csvFilePath, $csv_download_response);
+        file_put_contents($csvFilePath, mb_convert_encoding($csv_download_response, "UTF-8", "SJIS"));
 
         return 0;
     }

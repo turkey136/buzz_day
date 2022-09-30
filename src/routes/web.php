@@ -23,6 +23,10 @@ Route::get('/buzz_nico', function () {
     return view('buzzNico');
 });
 
+Route::get('/investment_trust', function () {
+    return view('investmentTrust');
+});
+
 Route::get('/', function () {
     return view('top');
 });
