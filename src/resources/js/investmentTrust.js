@@ -30,6 +30,10 @@ async function loadCsv(yeaterday) {
 };
 
 document.addEventListener('DOMContentLoaded', async function () {
+  var tableArea = document.getElementById('table-area');
+  tableArea.style.setProperty('visibility', 'hidden');
+  tableArea.style.setProperty('position', 'absolute');
+
   var yeaterday = new Date();
   yeaterday.setDate(yeaterday.getDate() - 1);
   await loadCsv(yeaterday);
@@ -45,7 +49,7 @@ document.addEventListener('DOMContentLoaded', async function () {
   });
 
   // table に CSV データから自動生成
-  var table = document.getElementById('data-table');
+  var table = document.getElementById('data-table-body');
   rows.forEach(function (row, index) {
     if (index <= 4 || row[0] === '') { return; }
 
@@ -70,5 +74,21 @@ document.addEventListener('DOMContentLoaded', async function () {
     table.appendChild(tr);
   });
 
+  $('#data-table').DataTable();
 
+  var loading = document.getElementById('loading');
+  loading.style.setProperty('display', 'none');
 });
+
+window.addEventListener('load', function () {
+  function submitClick() {
+    document.getElementById('disclaimer').style.setProperty('display', 'none');
+    var tableArea = document.getElementById('table-area')
+    tableArea.style.removeProperty('visibility');
+    tableArea.style.removeProperty('position');
+  }
+
+  var button = document.getElementById('submit');
+  button.onclick = submitClick;
+})
+

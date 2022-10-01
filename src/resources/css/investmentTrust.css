@@ -14,9 +14,8 @@ body {
 }
 
 .position-ref {
-  position: relative;
-  max-width: 90%;
-  padding-left: 5%;
+  max-width: 95%;
+  padding-left: 2.5%;
 }
 
 .content {
@@ -59,3 +58,29 @@ body {
 .table {
   padding-top:30px;
 }
+
+.disclaimer-button {
+  margin-top: 30px;
+}
+
+.disclaimer {
+  font-size: xx-large;
+  color: red;
+}
+
+.submit {
+  background-color: #1F3C9C
+}
+
+.cancel {
+  background-color: #dcdcdc
+}
+
+.submit:hover {
+  background-color: rgb(5, 21, 75)
+}
+
+.cancel:hover {
+  background-color: #a9a9a9
+}
+
