@@ -74,7 +74,9 @@ document.addEventListener('DOMContentLoaded', async function () {
     table.appendChild(tr);
   });
 
-  $('#data-table').DataTable();
+  $('#data-table').DataTable({
+    "displayLength": 100
+  });
 
   var loading = document.getElementById('loading');
   loading.style.setProperty('display', 'none');
@@ -86,6 +88,11 @@ window.addEventListener('load', function () {
     var tableArea = document.getElementById('table-area')
     tableArea.style.removeProperty('visibility');
     tableArea.style.removeProperty('position');
+
+    // datatable と materialize  とぶつかって崩れるので js で制御する
+    document.getElementById('data-table_length').style.setProperty('display', 'none');
+    $('input')[0].style.setProperty('height', '100%');
+    $('label')[1].style.setProperty('display', 'flex');
   }
 
   var button = document.getElementById('submit');

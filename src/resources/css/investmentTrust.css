@@ -13,13 +13,9 @@ body {
   justify-content: center;
 }
 
-.position-ref {
-  max-width: 95%;
-  padding-left: 2.5%;
-}
-
 .content {
   text-align: center;
+  width: 95%;
 }
 
 .title {

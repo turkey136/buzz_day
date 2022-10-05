@@ -6,9 +6,9 @@
         <meta http-equiv="Cache-Control" content="no-cache">
         <meta name="keywords" content="youtube,YouTube,急上昇,人気,ニコニコ,動画,ニコニコ動画,ランキング">
         <title>投資信託一覧</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link rel="stylesheet" href="/css/investmentTrust.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
