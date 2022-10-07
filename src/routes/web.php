@@ -27,6 +27,10 @@ Route::get('/investment_trust', function () {
     return view('investmentTrust');
 });
 
+Route::get('/investment_trust_statistics', function () {
+    return view('investmentTrustStatistics');
+});
+
 Route::get('/', function () {
     return view('top');
 });

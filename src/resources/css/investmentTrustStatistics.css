@@ -80,7 +80,14 @@ body {
   background-color: #a9a9a9
 }
 
+.avg-table {
+  width: auto;
+}
+
+.avg-table-area {
+  padding-top: 50px;
+}
+
 .button-area {
-  display: none;
   padding-bottom: 50px;
 }

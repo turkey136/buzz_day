@@ -9,6 +9,7 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="/css/investmentTrust.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -23,6 +24,19 @@
                 </div>
                 <div>
                     <div class="row" id='table-area'>
+                        <div class='button-area' id='button-area'>
+                            <a class="waves-effect waves-light btn submit" href="/investment_trust_statistics?kind_type=commodity">コモディティ</a>
+                            <a class="waves-effect waves-light btn submit" href="/investment_trust_statistics?kind_type=world_reit">国際REIT</a>
+                            <a class="waves-effect waves-light btn submit" href="/investment_trust_statistics?kind_type=world_stock">国際株式</a>
+                            <a class="waves-effect waves-light btn submit" href="/investment_trust_statistics?kind_type=world_bond">国際債券</a>
+                            <a class="waves-effect waves-light btn submit" href="/investment_trust_statistics?kind_type=jp_reit">国内REIT</a>
+                            <a class="waves-effect waves-light btn submit" href="/investment_trust_statistics?kind_type=jp_stock">国内株式</a>
+                            <a class="waves-effect waves-light btn submit" href="/investment_trust_statistics?kind_type=jp_bond">国内債券</a>
+                            <a class="waves-effect waves-light btn submit" href="/investment_trust_statistics?kind_type=balance">バランス</a>
+                            <a class="waves-effect waves-light btn submit" href="/investment_trust_statistics?kind_type=bull_bear">ブル・ベア</a>
+                            <a class="waves-effect waves-light btn submit" href="/investment_trust_statistics?kind_type=hedge_fund">ヘッジファンド</a>
+                            <a class="waves-effect waves-light btn submit" href="/investment_trust_statistics?kind_type=etc">その他</a>
+                        </div>
                         <div id='synchronized-date' class="synchronized-date"></div>
                         <div class='table'>
                             <table id='data-table'>
@@ -70,6 +84,11 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="row">
+                        <a class="waves-effect waves-light btn submit" href="/">
+                            <i class="material-icons left">arrow_back</i> Back
+                        </a>
                     </div>
                 </div>
             </div>
