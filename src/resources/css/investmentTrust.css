@@ -1,0 +1,86 @@
+html,
+body {
+  background-color: #fff;
+  color: #636b6f;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 200;
+  margin: 0;
+}
+
+.flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  text-align: center;
+  width: 95%;
+}
+
+.title {
+  font-size: 60px;
+}
+
+.m-b-md {
+  margin-bottom: 30px;
+}
+
+.thumbnail {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  z-index: 2;
+}
+
+.title-str {
+  vertical-align: middle;
+}
+
+.fotter-link {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-color {
+  background-color: #1F3C9C;
+}
+
+.synchronized-date {
+    position: absolute;
+    margin-left: auto;
+    padding-left: 5px;
+}
+
+.table {
+  padding-top:30px;
+}
+
+.disclaimer-button {
+  margin-top: 30px;
+}
+
+.disclaimer {
+  font-size: xx-large;
+  color: red;
+}
+
+.submit {
+  background-color: #1F3C9C
+}
+
+.cancel {
+  background-color: #dcdcdc
+}
+
+.submit:hover {
+  background-color: rgb(5, 21, 75)
+}
+
+.cancel:hover {
+  background-color: #a9a9a9
+}
+
+.button-area {
+  display: none;
+  padding-bottom: 50px;
+}

@@ -69,7 +69,6 @@
                           </div>
                       </a>
                 </div>
-                <hr>
             </div>
         </div>
          <footer class="page-footer footer-copyright footer-color">

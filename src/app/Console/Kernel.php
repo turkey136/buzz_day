@@ -17,6 +17,7 @@ class Kernel extends ConsoleKernel
     {
       $schedule->command(' command:scrapingYoutube')->daily('23:30');
       $schedule->command(' command:scrapingNiconico')->daily('23:30');
+      $schedule->command(' command:scrapingSbiInvestmentTrust')->daily('23:00');
     }
 
     /**

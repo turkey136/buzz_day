@@ -35,9 +35,24 @@
                                 </div>
                             </div>
                           </div>
+
+                          <div class="col s12 m6">
+
+                            <div class="card">
+                                <div class="card-content">
+                                    <span class="card-title">
+                                        投信信託
+                                    </span>
+                                    <i class="material-icons large">local_atm</i>
+                                        <p>投資信託の評価額</p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="/investment_trust">View</a>
+                                </div>
+                            </div>
+                          </div>
                     </div>
                 </div>
-                <hr>
             </div>
         </div>
          <footer class="page-footer footer-copyright footer-color">
