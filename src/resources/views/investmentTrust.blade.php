@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Cache-Control" content="no-cache">
-        <meta name="keywords" content="youtube,YouTube,急上昇,人気,ニコニコ,動画,ニコニコ動画,ランキング">
+        <meta name="keywords" content="投資,投資信託,投信,グラフ,コモディティ,国際REIT,国際株式,国際債券,国内REIT,国内株式,国内債券,バランス,ブル・ベア,ヘッジファンド,その他,一覧,検索,ランキング">
         <title>投資信託一覧</title>
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.css"/>

@@ -27,6 +27,8 @@ mix.js('resources/js/investmentTrust.js', 'public/js');
 mix.postCss('resources/css/investmentTrust.css', 'public/css', []);
 mix.js('resources/js/investmentTrustStatistics.js', 'public/js');
 mix.postCss('resources/css/investmentTrustStatistics.css', 'public/css', []);
+mix.js('resources/js/investmentTrustStatisticsGraph.js', 'public/js');
+mix.postCss('resources/css/investmentTrustStatisticsGraph.css', 'public/css', []);
 
 // Video Top
 mix.js('resources/js/buzzTop.js', 'public/js');
