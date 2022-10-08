@@ -68,6 +68,10 @@ body {
   background-color: #1F3C9C
 }
 
+.btn {
+  margin-bottom: 10px;
+}
+
 .cancel {
   background-color: #dcdcdc
 }

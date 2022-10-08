@@ -3,11 +3,13 @@
     "/js/buzzNico.js": "/js/buzzNico.js",
     "/js/investmentTrust.js": "/js/investmentTrust.js",
     "/js/investmentTrustStatistics.js": "/js/investmentTrustStatistics.js",
+    "/js/investmentTrustStatisticsGraph.js": "/js/investmentTrustStatisticsGraph.js",
     "/js/buzzTop.js": "/js/buzzTop.js",
     "/css/investmentTrustStatistics.css": "/css/investmentTrustStatistics.css",
     "/css/investmentTrust.css": "/css/investmentTrust.css",
     "/css/buzzNico.css": "/css/buzzNico.css",
     "/css/buzzTube.css": "/css/buzzTube.css",
     "/css/top.css": "/css/top.css",
-    "/css/buzzTop.css": "/css/buzzTop.css"
+    "/css/buzzTop.css": "/css/buzzTop.css",
+    "/css/investmentTrustStatisticsGraph.css": "/css/investmentTrustStatisticsGraph.css"
 }

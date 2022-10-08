@@ -5,11 +5,9 @@ var avgDifferenc = 0
 
 // CSV データ中の表示項目と列番号
 const tableIndex = {
-  "協会コード": 0,
   "ファンド名": 1,
   "基準価額(円)": 16,
   "前日比(円)": 17,
-  "前日比率": 18,
 }
 
 const kindType = {
@@ -38,13 +36,8 @@ async function loadCsv(yeaterday) {
 };
 
 document.addEventListener('DOMContentLoaded', async function () {
-  var tableArea = document.getElementById('table-area');
-  tableArea.style.setProperty('visibility', 'hidden');
-  tableArea.style.setProperty('position', 'absolute');
   var typeStr = location.search.replace(/\?.+=/g, '');
-  document.getElementById(`${typeStr}_button`).classList.remove('submit');
-  document.getElementById(`${typeStr}_button`).textContent = 'グラフで見る';
-  document.getElementById(`${typeStr}_button`).setAttribute('href', `/investment_trust_statistics_graph?kind_type=${typeStr}`);
+  var defData = [];
 
   var yeaterday = new Date();
   yeaterday.setDate(yeaterday.getDate() - 1);
@@ -53,7 +46,10 @@ document.addEventListener('DOMContentLoaded', async function () {
   var month = (yeaterday.getMonth() + 1).toString().padStart(2, '0');
   var day = yeaterday.getDate().toString().padStart(2, '0')
   this.getElementById('synchronized-date').textContent = `更新日： ${year}-${month}-${day} 23:00`;
-  this.getElementById('title').textContent = `投資信託一覧（${kindType[typeStr]}）`;
+  if ('all' !== typeStr) {
+    this.getElementById('title').textContent = `投資信託（${kindType[typeStr]}）`;
+    this.getElementById('back').setAttribute('href', `/investment_trust_statistics?kind_type=${typeStr}`);
+  }
 
   // CSV を解析
   const originalRows = rowCsv.replace(/"/g, '').split(/\n/);
@@ -62,55 +58,53 @@ document.addEventListener('DOMContentLoaded', async function () {
     if (index <= 4 || splitrow[0] === '') { return; }
     if (kindType[typeStr] === splitrow[13]) {
       rows.push(splitrow);
+      defData.push(
+        {
+          "名前": splitrow[1],
+          "評価額": Number(splitrow[16]),
+          "前日比": Number(splitrow[17]),
+        }
+      )
       avgValue = avgValue + Number(splitrow[16]);
       avgDifferenc = avgDifferenc + Number(splitrow[17]);
+    } else if ('all' === typeStr) {
+      defData.push(
+        {
+          "名前": splitrow[1],
+          "評価額": Number(splitrow[16]),
+          "前日比": Number(splitrow[17]),
+          "種別": splitrow[13],
+        }
+      )
     }
   });
   avgValue = Math.floor(avgValue / rows.length);
   avgDifferenc = Math.floor(avgDifferenc / rows.length);
 
-  this.getElementById('avg_value').textContent = Number(avgValue).toLocaleString();
-  this.getElementById('avg_differenc').textContent = avgDifferenc;
-
-  // table に CSV データから自動生成
-  var table = document.getElementById('data-table-body');
-  rows.forEach(function (row) {
-    var tr = document.createElement('tr');
-    for (let key in tableIndex) {
-      var td = document.createElement('td');
-
-      let value = row[tableIndex[key]];
-      if (990 === tableIndex[key]) {
-        value = Math.ceil(row[16] * row[30] / 100.0);
-      } else if (991 === tableIndex[key]) {
-        value = parseFloat(row[35] / row[16] * 100.0).toFixed(2);
-      }
-
-      if ([16, 17, 35].includes(tableIndex[key])) {
-        value = Number(value).toLocaleString();
-      }
-      td.innerHTML = value;
-      tr.appendChild(td);
-    }
-
-    table.appendChild(tr);
-  });
-
-  $('#data-table').DataTable({
-    "displayLength": 100,
-    "order": [[2, "desc"]]
-  });
-
   var loading = document.getElementById('loading');
   loading.style.setProperty('display', 'none');
 
-  var tableArea = document.getElementById('table-area')
-  tableArea.style.removeProperty('visibility');
-  tableArea.style.removeProperty('position');
 
-  // datatable と materialize  とぶつかって崩れるので js で制御する
-  document.getElementById('data-table_length').style.setProperty('display', 'none');
-  $('input')[0].style.setProperty('height', '100%');
-  $('label')[1].style.setProperty('display', 'flex');
+  var chart = null;
+  if ('all' === typeStr) {
+    chart = new Taucharts.Chart({
+      data: defData,
+      type: 'scatterplot',
+      color: '種別',
+      x: '評価額',
+      y: '前日比',
+      plugins: [Taucharts.api.plugins.get('tooltip')(), Taucharts.api.plugins.get('legend')()],
+    });
+  } else {
+    chart = new Taucharts.Chart({
+      data: defData,
+      type: 'scatterplot',
+      x: '評価額',
+      y: '前日比',
+      plugins: [Taucharts.api.plugins.get('tooltip')(), Taucharts.api.plugins.get('legend')()],
+    });
+  }
+
+  chart.renderTo('#scatter');
 });
 
