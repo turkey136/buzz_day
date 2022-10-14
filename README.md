@@ -34,6 +34,9 @@ docker-compose run --rm php php artisan command:scrapingYoutube
 
 # ニコニコ動画
 docker-compose run --rm php php artisan command:scrapingNiconico
+
+# 投資信託データ取得
+docker-compose run --rm php php artisan command:scrapingSbiInvestmentTrust
 ```
 
 - ページ追加後
