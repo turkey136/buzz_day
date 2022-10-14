@@ -15,6 +15,8 @@
         <script src="https://cdn.jsdelivr.net/npm/d3@4.13.0/build/d3.min.js" charset="utf-8"></script>
         <script src="https://cdn.jsdelivr.net/npm/taucharts@2/dist/taucharts.min.js" type="text/javascript"></script>
         <script src="/js/investmentTrustStatisticsGraph.js"></script>
+        <script async src=`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{getenv('ADSENSE_CLIENT')}}`
+     crossorigin="anonymous"></script>
     </head>
     <body>
         <div class="flex-center position-ref">
