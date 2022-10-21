@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', async function () {
   // ニコニコ動画情報読み込み
   var niconicoCard = document.getElementById("yesterday_niconico");
   niconicoCard.style.setProperty('display', 'none');
-  await loadYoutubeJson();
+  await loadNiconicoJson();
   niconicoCard.src = niconicoVideos[yesterday]['image'];
   niconicoCard.style.removeProperty('display');
   document.getElementById("load_niconico").style.setProperty('display', 'none');
