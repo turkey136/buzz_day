@@ -15,9 +15,9 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-      $schedule->command(' command:scrapingYoutube')->daily('23:30');
-      $schedule->command(' command:scrapingNiconico')->daily('23:30');
-      $schedule->command(' command:scrapingSbiInvestmentTrust')->daily('23:00');
+      $schedule->command(' command:scrapingYoutube')->dailyAt('23:30');
+      $schedule->command(' command:scrapingNiconico')->dailyAt('23:30');
+      $schedule->command(' command:scrapingSbiInvestmentTrust')->dailyAt('23:00');
     }
 
     /**
