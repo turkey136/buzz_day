@@ -26,10 +26,10 @@
                             <div class="card">
                                 <div class="card-content">
                                     <span class="card-title">
-                                        昨日の人気動画
+                                        人気動画
                                     </span>
                                     <i class="material-icons large">ondemand_video</i>
-                                        <p>毎日の動画のランキング</p>
+                                        <p>動画のランキング</p>
                                 </div>
                                 <div class="card-action">
                                     <a href="/buzz_top">View</a>

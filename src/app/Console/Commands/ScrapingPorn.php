@@ -20,7 +20,7 @@ class ScrapingPorn extends Command
      *
      * @var string
      */
-    protected $description = 'ニコニコ動画 ランキング1位取得';
+    protected $description = 'アダルト動画1位取得';
 
     /**
      * Execute the console command.

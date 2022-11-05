@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link rel="stylesheet" href="/css/buzzTop.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script src="/js/buzzTop.js"></script>
     </head>
@@ -69,9 +70,14 @@
                           </div>
                       </a>
                 </div>
+                <div class="row">
+                    <a class="waves-effect waves-light btn back-button" href="/">
+                      <i class="material-icons left">arrow_back</i> Back
+                  </a>
+              </div>
             </div>
         </div>
-         <footer class="page-footer footer-copyright footer-color">
+        <footer class="page-footer footer-copyright footer-color">
             <div class="container">
                 © 2022 <a class = "fotter-link" href="https://unscrupulous-business-firm.com/%E8%AA%B0%E3%81%A0%E3%81%8A%E5%89%8D%E3%81%AF/" target="_blank">
                     悪徳商会
