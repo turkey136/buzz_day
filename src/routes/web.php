@@ -35,6 +35,10 @@ Route::get('/investment_trust_statistics_graph', function () {
     return view('investmentTrustStatisticsGraph');
 })->name('investment_trust.investment_trust_statistics_graph');
 
+Route::get('/novel', function () {
+    return view('novelTop');
+})->name('novel.top');
+
 Route::get('/sitemap.xml', 'App\Http\Controllers\SitemapController@sitemap')->name('sitemap.sitemap');
 
 Route::get('/', function () {

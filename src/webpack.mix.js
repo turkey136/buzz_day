@@ -30,6 +30,9 @@ mix.postCss('resources/css/investmentTrustStatistics.css', 'public/css', []);
 mix.js('resources/js/investmentTrustStatisticsGraph.js', 'public/js');
 mix.postCss('resources/css/investmentTrustStatisticsGraph.css', 'public/css', []);
 
+// 小説
+mix.postCss('resources/css/novelTop.css', 'public/css', []);
+
 // Video Top
 mix.js('resources/js/buzzTop.js', 'public/js');
 mix.postCss('resources/css/buzzTop.css', 'public/css', []);
