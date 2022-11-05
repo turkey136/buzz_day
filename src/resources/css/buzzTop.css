@@ -33,9 +33,7 @@ body {
 }
 
 .title {
-  font-size: 60px;
-  margin-bottom: 60px;
-  min-width: 400px;
+  font-size: xx-large;
 }
 
 .youtube-vist-link {
@@ -56,4 +54,9 @@ body {
 
 .spinner-black-only {
   border-color: black;
+}
+
+.back-button {
+  margin-bottom: 20px;
+  background-color: #333;
 }
