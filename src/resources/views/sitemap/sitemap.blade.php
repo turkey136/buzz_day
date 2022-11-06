@@ -30,6 +30,10 @@
       <lastmod>{{ date("Y-m-d") }}</lastmod>
   </sitemap>
   <sitemap>
+      <loc>{{ route('novel.yomou') }}</loc>
+      <lastmod>{{ date("Y-m-d") }}</lastmod>
+  </sitemap>
+  <sitemap>
       <loc>{{ route('top') }}</loc>
       <lastmod>{{ date("Y-m-d") }}</lastmod>
   </sitemap>

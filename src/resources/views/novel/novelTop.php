@@ -23,11 +23,11 @@
                     <ul class="collection with-header">
                         <li class="collection-item">
                               <h4>
-                                  <div class ='yomou-color'>小説を読もう
-                                      <a href="/novel/yomou" class="secondary-content">
-                                            <i class="material-icons yomou-color">send</i>
-                                      </a>
-                                </div>
+                                  <a href="/novel/yomou" class="secondary-content">
+                                      <div class ='yomou-color'>小説を読もう
+                                        <i class="material-icons yomou-color">send</i>
+                                    </div>
+                                  </a>
                               </h4>
                         </li>
                     </ul>

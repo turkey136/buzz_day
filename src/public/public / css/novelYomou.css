@@ -1,0 +1,47 @@
+.fotter-link {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-color {
+  background-color: #823f1c;
+}
+
+html,
+body {
+  background-color: #fff;
+  color: #636b6f;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 200;
+  margin: 0;
+}
+
+.flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.position-ref {
+  position: relative;
+  max-width: 90%;
+  padding-left: 5%;
+}
+
+.content {
+  text-align: center;
+}
+
+.title {
+  font-size: xx-large;
+}
+
+.back-button {
+  margin-bottom: 20px;
+  background-color: #823f1c;
+}
+
+.yomou-color {
+  color: #823f1c;
+}
+

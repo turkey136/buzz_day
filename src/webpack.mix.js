@@ -31,7 +31,9 @@ mix.js('resources/js/investmentTrustStatisticsGraph.js', 'public/js');
 mix.postCss('resources/css/investmentTrustStatisticsGraph.css', 'public/css', []);
 
 // 小説
-mix.postCss('resources/css/novelTop.css', 'public/css', []);
+mix.postCss('resources/css/novel/novelTop.css', 'public/css', []);
+mix.postCss('resources/css/novel/novelYomou.css', 'public/css', []);
+mix.js('resources/js/novel/novelYomou.js', 'public/js');
 
 // Video Top
 mix.js('resources/js/buzzTop.js', 'public/js');
