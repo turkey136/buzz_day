@@ -29,11 +29,11 @@ document.addEventListener('DOMContentLoaded', async function () {
     tr.appendChild(td);
 
     var td = document.createElement('td');
-    td.innerHTML = `<a href="${row['url']}">${row['title']}</a>`;
+    td.innerHTML = `<a href="${row['url']}" target="_blank" rel="noopener noreferrer">${row['title']}</a>`;
     tr.appendChild(td);
 
     var td = document.createElement('td');
-    td.innerHTML = `<a href="${row['owner_url']}">${row['owner']}</a>`;
+    td.innerHTML = `<a href="${row['owner_url']}" target="_blank" rel="noopener noreferrer">${row['owner']}</a>`;
     tr.appendChild(td);
 
     table.appendChild(tr);

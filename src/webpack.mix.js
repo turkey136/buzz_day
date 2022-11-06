@@ -14,27 +14,33 @@ const mix = require('laravel-mix');
 // Top
 mix.postCss('resources/css/top.css', 'public/css', []);
 
+// Video Top
+mix.js('resources/js/video/buzzTop.js', 'public/js');
+mix.postCss('resources/css/video/buzzTop.css', 'public/css', []);
+
 // Youtube
-mix.js('resources/js/buzzTube.js', 'public/js');
-mix.postCss('resources/css/buzzTube.css', 'public/css', []);
+mix.js('resources/js/video/buzzTube.js', 'public/js');
+mix.postCss('resources/css/video/buzzTube.css', 'public/css', []);
 
 // Niconico
-mix.js('resources/js/buzzNico.js', 'public/js');
-mix.postCss('resources/css/buzzNico.css', 'public/css', []);
+mix.js('resources/js/video/buzzNico.js', 'public/js');
+mix.postCss('resources/css/video/buzzNico.css', 'public/css', []);
 
-// 投資信託
-mix.js('resources/js/investmentTrust.js', 'public/js');
-mix.postCss('resources/css/investmentTrust.css', 'public/css', []);
-mix.js('resources/js/investmentTrustStatistics.js', 'public/js');
-mix.postCss('resources/css/investmentTrustStatistics.css', 'public/css', []);
-mix.js('resources/js/investmentTrustStatisticsGraph.js', 'public/js');
-mix.postCss('resources/css/investmentTrustStatisticsGraph.css', 'public/css', []);
+// 投資信託トップ
+mix.js('resources/js/investmentTrust/investmentTrust.js', 'public/js');
+mix.postCss('resources/css/investmentTrust/investmentTrust.css', 'public/css', []);
+
+// 投信信託商品別
+mix.js('resources/js/investmentTrust/investmentTrustStatistics.js', 'public/js');
+mix.postCss('resources/css/investmentTrust/investmentTrustStatistics.css', 'public/css', []);
+
+// 投資信託グラフ
+mix.js('resources/js/investmentTrust/investmentTrustStatisticsGraph.js', 'public/js');
+mix.postCss('resources/css/investmentTrust/investmentTrustStatisticsGraph.css', 'public/css', []);
 
 // 小説
 mix.postCss('resources/css/novel/novelTop.css', 'public/css', []);
 mix.postCss('resources/css/novel/novelYomou.css', 'public/css', []);
 mix.js('resources/js/novel/novelYomou.js', 'public/js');
 
-// Video Top
-mix.js('resources/js/buzzTop.js', 'public/js');
-mix.postCss('resources/css/buzzTop.css', 'public/css', []);
+
