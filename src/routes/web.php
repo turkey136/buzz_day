@@ -44,7 +44,6 @@ Route::get('/novel/yomou', function () {
 })->name('novel.yomou');
 
 Route::get('/sitemap.xml', 'App\Http\Controllers\SitemapController@sitemap')->name('sitemap.sitemap');
-Route::get('/page-sitemap.xml', 'App\Http\Controllers\SitemapController@pageSitemap')->name('sitemap.pageSitemap');
 
 Route::get('/', function () {
     return view('top');
