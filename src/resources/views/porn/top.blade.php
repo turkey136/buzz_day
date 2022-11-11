@@ -14,7 +14,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"></script>
         <script src="/js/pornTop.js"></script>
         <script type="text/javascript">(admaxads = window.admaxads || []).push({admax_id: "38b834090b8213dc8f83f5191bf863e7",type: "action"});</script>
-<script type="text/javascript" charset="utf-8" src="https://adm.shinobi.jp/st/t.js" async></script>
+        <script type="text/javascript" charset="utf-8" src="https://adm.shinobi.jp/st/t.js" async></script>
     </head>
     <body class = 'background'>
         <div class="flex-center position-ref">
