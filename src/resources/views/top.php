@@ -72,11 +72,18 @@
                 </div>
             </div>
         </div>
+        <p class = "porn-link">
+            <a href="/porn" target="_blank">
+              ■
+            </a>
+        </p>
         <footer class="page-footer footer-copyright footer-color">
             <div class="container">
-                © 2022 <a class = "fotter-link" href="https://unscrupulous-business-firm.com/%E8%AA%B0%E3%81%A0%E3%81%8A%E5%89%8D%E3%81%AF/" target="_blank">
-                    悪徳商会
-                </a>
+                <p>
+                    © 2022 <a class = "fotter-link" href="https://unscrupulous-business-firm.com/%E8%AA%B0%E3%81%A0%E3%81%8A%E5%89%8D%E3%81%AF/" target="_blank">
+                        悪徳商会
+                    </a>
+                  </p>
             </div>
         </footer>
     </body>
