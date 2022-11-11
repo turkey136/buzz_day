@@ -37,4 +37,8 @@
       <loc>{{ route('top') }}</loc>
       <lastmod>{{ date("Y-m-d") }}</lastmod>
   </url>
+  <url>
+      <loc>{{ route('porn.top') }}</loc>
+      <lastmod>{{ date("Y-m-d") }}</lastmod>
+  </url>
 </urlset>
