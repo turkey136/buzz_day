@@ -61,11 +61,11 @@ class ScrapingPorn extends Command
 
         return $crawler->filter('#videoCategory')->filter('li')->eq(1)->each(function ($node){
             return [
-              'url' => $node->filter('a')->eq(0)->attr('href'),
+              'url' => 'https://jp.pornhub.com'. $node->filter('a')->eq(0)->attr('href'),
               'title' => $node->filter('img')->eq(0)->attr('alt'),
               'img' => $node->filter('img')->eq(0)->attr('data-mediumthumb'),
               'owner' => $node->filter('a')->eq(2)->text(),
-              'owner_url' => $node->filter('a')->eq(2)->attr('href')
+              'owner_url' => 'https://jp.pornhub.com'. $node->filter('a')->eq(2)->attr('href')
             ];
         })[0];
     }
