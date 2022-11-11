@@ -13,6 +13,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"></script>
         <script src="/js/pornTop.js"></script>
+        <script src="https://adm.shinobi.jp/s/38b834090b8213dc8f83f5191bf863e7"></script>
     </head>
     <body class = 'background'>
         <div class="flex-center position-ref">
