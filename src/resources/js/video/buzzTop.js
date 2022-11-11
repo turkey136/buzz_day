@@ -1,12 +1,12 @@
 async function loadYoutubeJson() {
-  await fetch('storage/buzz_tube.json')
+  await fetch('/storage/buzz_tube.json')
     .then(result => result.json())
     .then((output) => {
       youtubeVideos = output;
     });
 };
 async function loadNiconicoJson() {
-  await fetch('storage/buzz_niconico.json')
+  await fetch('/storage/buzz_niconico.json')
     .then(result => result.json())
     .then((output) => {
       niconicoVideos = output;

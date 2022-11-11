@@ -21,7 +21,7 @@
                 </div>
                 <div>
                     <div class="row">
-                        <div class="col s12 m6">
+                        <div class="col s12 m4">
 
                             <div class="card">
                                 <div class="card-content">
@@ -37,8 +37,7 @@
                             </div>
                           </div>
 
-                          <div class="col s12 m6">
-
+                          <div class="col s12 m4">
                             <div class="card">
                                 <div class="card-content">
                                     <span class="card-title">
@@ -49,6 +48,21 @@
                                 </div>
                                 <div class="card-action">
                                     <a href="/investment_trust">View</a>
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="col s12 m4">
+                            <div class="card">
+                                <div class="card-content">
+                                    <span class="card-title">
+                                        小説
+                                    </span>
+                                    <i class="material-icons large">create</i>
+                                        <p>小説ランキング</p>
+                                </div>
+                                <div class="card-action">
+                                    <a href="/novel">View</a>
                                 </div>
                             </div>
                           </div>

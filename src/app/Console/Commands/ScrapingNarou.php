@@ -38,8 +38,8 @@ class ScrapingNarou extends Command
               'title' => $node->filter('li')->eq(0)->filter('a')->eq(0)->text(),
               'url' => $node->filter('li')->eq(0)->filter('a')->eq(0)->attr('href'),
               'category' => $node->filter('h3')->text(),
-              'owner' => $node->filter('li')->eq(0)->filter('a')->eq(1)->attr('href'),
-              'owner_url' => $node->filter('li')->eq(0)->filter('a')->eq(1)->text()
+              'owner_url' => $node->filter('li')->eq(0)->filter('a')->eq(1)->attr('href'),
+              'owner' => $node->filter('li')->eq(0)->filter('a')->eq(1)->text()
             ];
         });
 

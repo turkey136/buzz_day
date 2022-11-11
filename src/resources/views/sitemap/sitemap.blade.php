@@ -23,11 +23,19 @@
   </sitemap>
     <sitemap>
       <loc>{{ route('buzzTop') }}</loc>
-      <lastmod>2022-10-01</lastmod>
+      <lastmod>{{ date("Y-m-d") }}</lastmod>
+  </sitemap>
+  <sitemap>
+      <loc>{{ route('novel.top') }}</loc>
+      <lastmod>{{ date("Y-m-d") }}</lastmod>
+  </sitemap>
+  <sitemap>
+      <loc>{{ route('novel.yomou') }}</loc>
+      <lastmod>{{ date("Y-m-d") }}</lastmod>
   </sitemap>
   <sitemap>
       <loc>{{ route('top') }}</loc>
-      <lastmod>2022-10-01</lastmod>
+      <lastmod>{{ date("Y-m-d") }}</lastmod>
   </sitemap>
 
 </sitemapindex>

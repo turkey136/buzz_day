@@ -4,7 +4,7 @@
 }
 
 .footer-color {
-  background-color: black;
+  background-color: #823f1c;
 }
 
 html,
@@ -30,13 +30,18 @@ body {
 
 .content {
   text-align: center;
-  width: 100%;
 }
 
 .title {
   font-size: xx-large;
 }
 
-.spinner-black-only {
-  border-color: black;
+.back-button {
+  margin-bottom: 20px;
+  background-color: #823f1c;
 }
+
+.yomou-color {
+  color: #823f1c;
+}
+

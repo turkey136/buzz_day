@@ -1,8 +1,8 @@
 var videos = [];
-var keywords = ['youtube', 'YouTube', '急上昇', '人気'];
+var keywords = ['ニコニコ', 'ニコニコ動画', '24時間', '人気'];
 
 async function loadJson() {
-  await fetch('storage/buzz_tube.json')
+  await fetch('/storage/buzz_niconico.json')
     .then(result => result.json())
     .then((output) => {
       videos = output;
@@ -38,17 +38,17 @@ document.addEventListener('DOMContentLoaded', async function () {
     eventContent: function (info) {
       var data = videos[info.event.title]
       var video = `
-                  <a href="https://www.youtube.com/watch?v=${data['videoId']}"
+                  <a href="https://www.nicovideo.jp/watch//${data['videoId']}"
                     target="_blank"
                     class="${today === info.event.title ? 'today' : ''}">
 
-                    <img class="thumbnail" src="https://img.youtube.com/vi/${data['videoId']}/mqdefault.jpg"/>
+                    <img class="thumbnail" src="${data['image']}"/>
                   </a>
                   <p class="video_name ${today === info.event.title ? 'today' : ''}">
                     ${data['channelName']}
                   </>
                   <div class="dictionary ${today === info.event.title ? 'today' : ''}" ontouchstart="">
-                    <img src="icon/dictionary.svg" alt="ロゴ" width="20" height="20">
+                    <img src="icon/dictionary.svg" alt="辞書アイコン" width="20" height="20">
                     <div class="tooltips">
                       ${data['title']}
                       <BR><BR>
