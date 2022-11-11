@@ -63,7 +63,7 @@ class ScrapingPorn extends Command
             return [
               'url' => $node->filter('a')->eq(0)->attr('href'),
               'title' => $node->filter('img')->eq(0)->attr('alt'),
-              'img' => $node->filter('img')->eq(0)->attr('data-thumb_url'),
+              'img' => $node->filter('img')->eq(0)->attr('data-mediumthumb'),
               'owner' => $node->filter('a')->eq(2)->text(),
               'owner_url' => $node->filter('a')->eq(2)->attr('href')
             ];
