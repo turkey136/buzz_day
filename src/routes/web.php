@@ -43,6 +43,10 @@ Route::get('/novel/yomou', function () {
     return view('novel/novelYomou');
 })->name('novel.yomou');
 
+Route::get('/porn', function () {
+    return view('porn/top');
+})->name('porn.top');
+
 Route::get('/sitemap.xml', 'App\Http\Controllers\SitemapController@sitemap')->name('sitemap.sitemap');
 
 Route::get('/', function () {

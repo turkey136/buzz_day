@@ -40,3 +40,9 @@ body {
 .spinner-black-only {
   border-color: black;
 }
+
+.porn-link {
+    position: absolute;
+    right: 0;
+    color: black;
+}

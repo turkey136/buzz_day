@@ -43,4 +43,8 @@ mix.postCss('resources/css/novel/novelTop.css', 'public/css', []);
 mix.postCss('resources/css/novel/novelYomou.css', 'public/css', []);
 mix.js('resources/js/novel/novelYomou.js', 'public/js');
 
+// ポルノ
+mix.postCss('resources/css/porn/pornTop.css', 'public/css', []);
+mix.js('resources/js/porn/pornTop.js', 'public/js');
+
 

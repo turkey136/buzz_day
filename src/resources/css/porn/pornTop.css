@@ -1,0 +1,47 @@
+.flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  text-align: center;
+  width: 95%;
+}
+
+.title {
+  font-size: 60px;
+  color: #c6c6c6;
+}
+
+.porn-hub-color {
+  color: #ffa31a
+}
+
+.background {
+  background-color: #000000
+}
+
+.porn-box {
+  box-shadow: 0 2px 2px 0 rgb(255, 255, 255),
+    0 3px 1px -2px rgb(255, 255, 255),
+    0 1px 5px 0 rgb(255, 255, 255)
+}
+
+.back-button {
+  margin-bottom: 20px;
+  background-color: #c6c6c6;
+}
+
+.footer-color {
+  background-color: #c6c6c6;
+}
+
+.btn:hover, .btn-large:hover, .btn-small:hover {
+    background-color: #828080;
+}
+
+.fotter-link {
+  text-decoration: none;
+  color: white;
+}
