@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Cache-Control" content="no-cache">
         <meta name="google-site-verification" content="4_W4djHFL0__hXHOD3MLqn6SnlaJQF7XMF5c03IgPGU" />
-        <meta name="keywords" content="動画,急上昇,人気,投資信託,ランキング">
+        <meta name="keywords" content="動画,急上昇,人気,投資信託,ランキング,厳選,Javmix.TV,tkTube,tktube">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -73,7 +73,7 @@
             </div>
         </div>
         <p class = "porn-link">
-            <a href="/porn" target="_blank">
+            <a href="/porn" target="_blank" class='porn-link'>
               ■
             </a>
         </p>

@@ -10,11 +10,17 @@ function siteName(key) {
   let name = '';
   if (key.match(/porn_hub/)) {
     name = 'PornHub';
+  } else if (key.match(/tk_tube/)) {
+    name = 'tbTube';
+  } else if (key.match(/javmix/)) {
+    name = 'Javmix.TV'
   }
   return name;
 }
 
 function buildCard(video, key) {
+  let link = document.createElement("a");
+  link.href = video['url'];
   let col = document.createElement('div');
   col.className = 'col s12 m6';
 
@@ -30,28 +36,34 @@ function buildCard(video, key) {
   title.className = 'card-title';
   let site = siteName(key);
   title.innerHTML = site;
+  let action = document.createElement('div');
+  actionClass = 'card-action action-heigth';
+
   if ('PornHub' === site) {
     title.className = 'porn-hub-color';
+    action.className = actionClass + ' porn-hub-color';
+  } else if ('tbTube' === site) {
+    title.className = 'tk-tube-color';
+    action.className = actionClass + ' tk-tube-color';
+  } else if ('Javmix.TV' === site) {
+    title.className = 'javmix-color';
+    action.className = actionClass + ' javmix-color';
   }
 
-  let action = document.createElement('div');
-  action.className = 'card-action';
-  let link = document.createElement("a");
-  link.href = video['url'];
-  let linkTitle = video['title'];
-  if (80 < linkTitle.length) {
-    linkTitle = linkTitle.slice(0, 61) + '…';
+  let titleStr = video['title'];
+  if (80 < titleStr.length) {
+    titleStr = titleStr.slice(0, 61) + '…';
   }
-  link.innerHTML = linkTitle;
-  action.appendChild(link);
+  action.innerHTML = titleStr;
 
   col.appendChild(card);
   card.appendChild(cardImage);
   cardImage.appendChild(img);
   cardImage.appendChild(title);
   card.appendChild(action);
+  link.appendChild(col);
 
-  return col;
+  return link;
 }
 
 let videos = [];
