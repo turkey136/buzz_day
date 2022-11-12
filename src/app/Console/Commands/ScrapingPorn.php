@@ -30,10 +30,14 @@ class ScrapingPorn extends Command
     public function handle()
     {
         $todayData = [
-            'porn_hub_jp_a' => $this->scrapingPornHub('homemade', 'jp'),
-            'porn_hub_jp_p' => $this->scrapingPornHub('professional', 'jp'),
-            'porn_hub_world_a' => $this->scrapingPornHub('homemade', ''),
-            'porn_hub_world_p' => $this->scrapingPornHub('professional', ''),
+            'porn_hub_jp_a_hot' => $this->scrapingPornHub('homemade', 'jp', 'ht'),
+            'porn_hub_jp_p_hot' => $this->scrapingPornHub('professional', 'jp', 'ht'),
+            'porn_hub_world_a_hot' => $this->scrapingPornHub('homemade', '', 'ht'),
+            'porn_hub_world_p_hot' => $this->scrapingPornHub('professional', '', 'ht'),
+            'tk_tube_viewed' => $this->scrapingTkTube('viewed'),
+            'tk_tube_rating' => $this->scrapingTkTube('rating'),
+            'javmix_soaring' => $this->scrapingJavmix('soaring'),
+            'javmix_popularity' => $this->scrapingJavmix('popularity'),
         ];
 
         // file 出力
@@ -49,14 +53,52 @@ class ScrapingPorn extends Command
         return 0;
     }
 
-    private function scrapingPornHub($production, $country)
+    private function scrapingJavmix($type)
     {
-        $client = new Client(HttpClient::create(['timeout' => 10]));
-        $url = 'https://jp.pornhub.com/video?o=ht&p=' . $production;
+        $client = new Client(HttpClient::create(['timeout' => 100]));
+        $url = 'https://javmix.tv/' . $type . '/';
+
+        $crawler = $client->request('GET', $url);
+        return $crawler->filter('a')->eq(17)->each(function ($node){
+            return [
+              'url' => $node->attr('href'),
+              'title' =>  $node->filter('span')->eq(0)->text(),
+              'img' => $node->filter('img')->eq(0)->attr('src'),
+              'owner' => 'unknown',
+              'owner_url' => 'nonthing'
+            ];
+        })[0];
+    }
+
+    private function scrapingTkTube($type)
+    {
+        $client = new Client(HttpClient::create(['timeout' => 100]));
+        $url = '';
+        if ('viewed' === $type ) {
+            $url = 'https://www.tktube.com/most-popular/?mode=async&function=get_block&block_id=list_videos_common_videos_list&sort_by=video_viewed_today';
+        } else if ('rating' === $type) {
+            $url = 'https://www.tktube.com/top-rated/?mode=async&function=get_block&block_id=list_videos_common_videos_list&sort_by=rating_today';
+        }
+
+        $crawler = $client->request('GET', $url);
+        return $crawler->filter('a')->eq(3)->each(function ($node){
+            return [
+              'url' => $node->attr('href'),
+              'title' => $node->filter('strong')->eq(0)->text(),
+              'img' => $node->filter('img')->eq(0)->attr('src'),
+              'owner' => 'unknown',
+              'owner_url' => 'nonthing'
+            ];
+        })[0];
+    }
+
+    private function scrapingPornHub($production, $country, $type)
+    {
+        $client = new Client(HttpClient::create(['timeout' => 100]));
+        $url = 'https://jp.pornhub.com/video?o=' . $type . '&p=' . $production;
         if ("" !== $country) {
             $url = $url . '&cc=' . $country;
         }
-                echo $url;
         $crawler = $client->request('GET', $url);
 
         return $crawler->filter('#videoCategory')->filter('li')->eq(1)->each(function ($node){

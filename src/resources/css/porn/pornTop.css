@@ -18,6 +18,10 @@
   color: #ffa31a
 }
 
+.tk-tube-color {
+  color: #276fdb;
+}
+
 .background {
   background-color: #000000
 }
@@ -44,4 +48,12 @@
 .fotter-link {
   text-decoration: none;
   color: white;
+}
+
+.action-heigth {
+  height: 78px;
+}
+
+.javmix-color {
+  color: #f7c54c;
 }

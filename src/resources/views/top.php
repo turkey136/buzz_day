@@ -73,7 +73,7 @@
             </div>
         </div>
         <p class = "porn-link">
-            <a href="/porn" target="_blank">
+            <a href="/porn" target="_blank" class='porn-link'>
               ■
             </a>
         </p>
