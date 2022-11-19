@@ -1,5 +1,5 @@
 async function loadPornJson() {
-  await fetch('/storage/buzz_porn.json')
+  await fetch('/storage/buzz_porn.json', { cache: "no-store" })
     .then(result => result.json())
     .then((output) => {
       videos = output;

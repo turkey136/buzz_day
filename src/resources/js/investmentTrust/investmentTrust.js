@@ -22,7 +22,7 @@ async function loadCsv(yeaterday) {
   var year = yeaterday.getFullYear();
   var month = (yeaterday.getMonth() + 1).toString().padStart(2, '0');
   var fileName = `${year}${month}${yeaterday.getDate().toString().padStart(2, '0')}`.replace(/\n|\r/g, '');
-  await fetch('/storage/sbi_investment_trust/' + year + '/' + month + '/' + fileName + '.csv')
+  await fetch('/storage/sbi_investment_trust/' + year + '/' + month + '/' + fileName + '.csv', { cache: "no-store" })
     .then(result => result.text())
     .then((output) => {
       rowCsv = output;
