@@ -1,4 +1,4 @@
-conposer install
+composer install
 npm run prod
 php artisan cache:clear
 php artisan config:clear
