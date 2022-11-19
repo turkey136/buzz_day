@@ -15,11 +15,15 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
+      // PM 11:00 代
       $schedule->command(' command:scrapingYoutube')->dailyAt('23:30');
       $schedule->command(' command:scrapingNiconico')->dailyAt('23:30');
       $schedule->command(' command:scrapingPorn')->dailyAt('23:30');
       $schedule->command(' command:scrapingNarou')->dailyAt('23:30');
       $schedule->command(' command:scrapingSbiInvestmentTrust')->dailyAt('23:00');
+
+      // AM 4:00 代
+      $schedule->command(' command:totallingSbiInvestmentTrust')->dailyAt('4:00');
     }
 
     /**

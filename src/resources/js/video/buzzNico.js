@@ -2,7 +2,7 @@ var videos = [];
 var keywords = ['ニコニコ', 'ニコニコ動画', '24時間', '人気'];
 
 async function loadJson() {
-  await fetch('/storage/buzz_niconico.json')
+  await fetch('/storage/buzz_niconico.json', { cache: "no-store" })
     .then(result => result.json())
     .then((output) => {
       videos = output;

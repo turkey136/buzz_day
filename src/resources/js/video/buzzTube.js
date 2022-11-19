@@ -2,7 +2,7 @@ var videos = [];
 var keywords = ['youtube', 'YouTube', '急上昇', '人気'];
 
 async function loadJson() {
-  await fetch('/storage/buzz_tube.json')
+  await fetch('/storage/buzz_tube.json', { cache: "no-store" })
     .then(result => result.json())
     .then((output) => {
       videos = output;
