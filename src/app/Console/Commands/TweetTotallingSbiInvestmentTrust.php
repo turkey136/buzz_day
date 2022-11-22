@@ -55,7 +55,6 @@ class TweetTotallingSbiInvestmentTrust extends Command
         }
 
         $message = $this->buildMessage($yesterdayData[$type], $type);
-        dd($message);
         $this->tweet($message);
     }
 
