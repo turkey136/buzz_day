@@ -3,8 +3,6 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
-use Goutte\Client;
-use Symfony\Component\HttpClient\HttpClient;
 
 class ScrapingRakutenEtf extends Command
 {
@@ -15,7 +13,7 @@ class ScrapingRakutenEtf extends Command
      */
     protected $signature = 'command:scrapingRakutenEtf';
 
-    /**Goutte
+    /**
      * The console command description.
      *
      * @var string
@@ -39,10 +37,5 @@ class ScrapingRakutenEtf extends Command
         system('curl -o ' . $stockListFilePath . '  https://www.rakuten-sec.co.jp/web/market/search/etf_search/ETFD.csv');
 
         return 0;
-    }
-
-    private function getStockList()
-    {
-
     }
 }
