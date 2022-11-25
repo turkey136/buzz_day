@@ -66,18 +66,19 @@ class TweetTotallingSbiInvestmentTrust extends Command
 
         $connection = new TwitterOAuth($apiKey, $apiSecret, $accessToken, $accessTokenSecret);
         $connection->setApiVersion("2");
+        dd($tweetMessage);
         $result = $connection->post("tweets", ["text" => $tweetMessage], true);
     }
 
     protected function buildMessage($yesterdayData, $type)
     {
-        $message = '🤖 昨日の「' .$type . '」分野の評価額だよ。' . PHP_EOL . PHP_EOL;
-        $message = $message . '平均評価額=' . $yesterdayData['avg_price'] . '円, 平均前日比=' . $yesterdayData['avg_day_before_ratio'] .'円' . PHP_EOL . PHP_EOL . PHP_EOL;
+        $message = '🤖 昨日の #投資信託 「' .$type . '」分野の #評価額 だよ。' . PHP_EOL . PHP_EOL;
+        $message = $message . '平均評価額=' . $yesterdayData['avg_price'] . '円, 平均前日差=' . $yesterdayData['avg_day_before_ratio'] .'円' . PHP_EOL . PHP_EOL . PHP_EOL;
 
         if (0 <= $yesterdayData['avg_day_before_ratio']) {
             $message = $message . 'やったね！あがったよ' . PHP_EOL . PHP_EOL;
 
-            if ($yesterdayData['price_3day'] < $yesterdayData['avg_day_before_ratio']) {
+            if ($yesterdayData['price_3day'] < $yesterdayData['avg_price']) {
                 $message = $message . 'しかも3営業日平均より上がっているよ';
             } else {
                 $message = $message . 'でも3営業日平均より下がっている';
@@ -85,14 +86,14 @@ class TweetTotallingSbiInvestmentTrust extends Command
         } else {
             $message = $message . '残念。下がっちゃった。明日は頑張って上げようね' . PHP_EOL;
 
-            if ($yesterdayData['price_3day'] < $yesterdayData['avg_day_before_ratio']) {
+            if ($yesterdayData['price_3day'] < $yesterdayData['avg_price']) {
                  $message = $message . 'でも3営業日平均より上がっているよ';
             } else {
                 $message = $message . 'しかも3営業日平均より下がっている';
             }
         }
 
-        return $message . PHP_EOL . PHP_EOL . '過去3営業日平均評価額=' . $yesterdayData['price_3day'] . '円, 過去3営業日平均前日比=' . $yesterdayData['day_before_ratio_3day'] . '円';
+        return $message . PHP_EOL . PHP_EOL . '過去3営業日平均評価額=' . $yesterdayData['price_3day'] . '円, 過去3営業日平均前日差=' . $yesterdayData['day_before_ratio_3day'] . '円';
     }
 
     protected function getType() {

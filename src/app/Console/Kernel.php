@@ -20,7 +20,6 @@ class Kernel extends ConsoleKernel
       $schedule->command('command:scrapingNiconico')->dailyAt('23:30');
       $schedule->command('command:scrapingPorn')->dailyAt('23:30');
       $schedule->command('command:scrapingNarou')->dailyAt('23:30');
-      $schedule->command('command:scrapingSbiInvestmentTrust')->dailyAt('23:00');
 
       // AM 1:00 代
       $schedule->command('command:totallingSbiInvestmentTrust')->dailyAt('1:00');
@@ -37,6 +36,10 @@ class Kernel extends ConsoleKernel
       $schedule->command('command:tweetTotallingSbiInvestmentTrust jp_reit')->dailyAt('10:20');
       $schedule->command('command:tweetTotallingSbiInvestmentTrust jp_stock')->dailyAt('10:30');
       $schedule->command('command:tweetTotallingSbiInvestmentTrust jp_bond')->dailyAt('10:40');
+
+      //
+      $schedule->command('command:scrapingSbiInvestmentTrust')->everyFourHours();
+      $schedule->command('command:scrapingRakutenEtf')->everyFourHours();
     }
 
     /**
