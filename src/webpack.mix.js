@@ -11,8 +11,14 @@ const mix = require('laravel-mix');
  |
  */
 
+// common
+mix.js('resources/js/app.js', 'public/js');
+mix.postCss('resources/css/common/common_sidebar.css', 'public/css', []);
+mix.postCss('resources/css/common/common.css', 'public/css', []);
+
 // Top
 mix.postCss('resources/css/top.css', 'public/css', []);
+
 
 // Video Top
 mix.js('resources/js/video/buzzTop.js', 'public/js');

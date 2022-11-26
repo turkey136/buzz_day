@@ -1,0 +1,56 @@
+.fotter-link {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-color {
+  background-color: black;
+}
+
+html,
+body {
+  background-color: #fff;
+  color: #636b6f;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 200;
+  margin: 0;
+}
+
+.flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.position-ref {
+  position: relative;
+}
+
+.content {
+  text-align: center;
+  width: 100%;
+}
+
+.title {
+  font-size: xx-large;
+}
+
+.spinner-black-only {
+  border-color: black;
+}
+
+.porn-link {
+  position: absolute;
+  right: 0;
+  color: black;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
+  margin-right: auto;
+}
+
+.menu-icon {
+  font-size: 36px;
+  margin: 10px;
+  color: white;
+}

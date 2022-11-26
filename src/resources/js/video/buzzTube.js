@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', async function () {
   var calendar = new FullCalendar.Calendar(calendarEl, {
     initialView: 'dayGridMonth',
     headerToolbar: {
-      right: "dayGridMonth,dayGridDay",
+      right: "",
     },
     locale: 'ja',
     events: events,

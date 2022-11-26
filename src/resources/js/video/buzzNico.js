@@ -1,5 +1,4 @@
 var videos = [];
-var keywords = ['ニコニコ', 'ニコニコ動画', '24時間', '人気'];
 
 async function loadJson() {
   await fetch('/storage/buzz_niconico.json', { cache: "no-store" })
@@ -29,7 +28,7 @@ document.addEventListener('DOMContentLoaded', async function () {
   var calendar = new FullCalendar.Calendar(calendarEl, {
     initialView: 'dayGridMonth',
     headerToolbar: {
-      right: "dayGridMonth,dayGridDay",
+      right: "",
     },
     locale: 'ja',
     events: events,
@@ -60,11 +59,5 @@ document.addEventListener('DOMContentLoaded', async function () {
     }
   });
 
-  // Meta keyword の書きかえ
-  for (let key in videos) {
-    keywords.push(videos[key]['channelName'], videos[key]['channelName']);
-  }
-  var metaKeyword = document.head.children[3];
-  metaKeyword.setAttribute('content', keywords.join(','));
   calendar.render();
 });
