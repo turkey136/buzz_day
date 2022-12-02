@@ -8,24 +8,13 @@
   z-index: 2;
 }
 
-@media (max-width: 800px) {
-  .tooltips {
-    display: none;
-    position: absolute;
-    bottom: -7.5em;
-    z-index: 1000;
-    padding: 0.5em;
-    color: #000000;
-    background: #FFFFFF;
-    border-radius: 0.5em;
-    white-space: normal;
-    width: auto;
-    z-index: 9;
+@media screen and (max-width: 800px) {
+  .page-title {
+    font-size: 19px;
   }
 }
 
-@media (min-width: 801px) {
-  .tooltips {
+.tooltips {
     display: none;
     position: static;
     bottom: -7.5em;
@@ -36,7 +25,6 @@
     border-radius: 0.5em;
     white-space: normal;
     z-index: 9;
-  }
 }
 
 .tooltips:after {

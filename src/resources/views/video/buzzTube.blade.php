@@ -11,7 +11,7 @@
 @section('keywords', 'youtube,YouTube,急上昇,人気,ランキング,1位')
 @section('description', 'Youtube毎日の24時間閲覧ランキング1位')
 @section('title', '悪徳商会の工具箱:Youtube 1位')
-@section('pageTitle', 'Youtube 毎日の閲覧1位 Videos')
+@section('pageTitle', 'Youtube 閲覧1位 Videos')
 
 @section('content')
     <div id='calendar' class="calendar"></div>

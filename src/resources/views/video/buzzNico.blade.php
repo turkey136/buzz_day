@@ -11,7 +11,7 @@
 @section('keywords', 'youtube,YouTube,急上昇,人気,ニコニコ,動画,ニコニコ動画,ランキング,1位')
 @section('description', 'ニコニコ動画の昨日の24時間閲覧ランキング1位')
 @section('title', '悪徳商会の工具箱:ニコニコ動画1位')
-@section('pageTitle', 'ニコニコ動画毎日の閲覧1位 Videos')
+@section('pageTitle', 'ニコニコ動画の閲覧1位 Videos')
 
 @section('content')
     <div id='calendar' class="calendar"></div>
