@@ -34,12 +34,6 @@ document.addEventListener('DOMContentLoaded', async function () {
   tableArea.style.setProperty('visibility', 'hidden');
   tableArea.style.setProperty('position', 'absolute');
 
-  document.getElementById('disclaimer').style.setProperty('display', 'none');
-  var tableArea = document.getElementById('table-area')
-  tableArea.style.removeProperty('visibility');
-  tableArea.style.removeProperty('position');
-  document.getElementById('button-area').style.display = 'block';
-
   var yeaterday = new Date();
   yeaterday.setDate(yeaterday.getDate() - 1);
   await loadCsv(yeaterday);
@@ -100,8 +94,6 @@ window.addEventListener('load', function () {
     tableArea.style.removeProperty('visibility');
     tableArea.style.removeProperty('position');
     document.getElementById('button-area').style.display = 'block';
-
-    document.cookie = "consent=true;max-age=3600";
   }
 
   var button = document.getElementById('submit');

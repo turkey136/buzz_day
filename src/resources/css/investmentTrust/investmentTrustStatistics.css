@@ -1,58 +1,12 @@
-html,
-body {
-  background-color: #fff;
-  color: #636b6f;
-  font-family: 'Nunito', sans-serif;
-  font-weight: 200;
-  margin: 0;
-}
-
-.flex-center {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-}
-
-.content {
-  text-align: center;
-  width: 95%;
-}
-
-.title {
-  font-size: 60px;
-}
-
-.m-b-md {
-  margin-bottom: 30px;
-}
-
 .thumbnail {
   width: 100%;
   aspect-ratio: 16 / 9;
   z-index: 2;
 }
 
-.title-str {
-  vertical-align: middle;
-}
-
-.fotter-link {
-  text-decoration: none;
-  color: white;
-}
-
-.footer-color {
-  background-color: #1F3C9C;
-}
-
 .synchronized-date {
-    position: absolute;
-    margin-left: auto;
-    padding-left: 5px;
-}
-
-.table {
-  padding-top:30px;
+  margin: 0px 10px;
+  position: absolute;
 }
 
 .disclaimer-button {
@@ -64,24 +18,17 @@ body {
   color: red;
 }
 
-.submit {
-  background-color: #1F3C9C
-}
-
 .btn {
-  margin-bottom: 10px;
+  background: black;
 }
 
-.cancel {
-  background-color: #dcdcdc
+.btn:hover {
+  background: #424242;
 }
 
-.submit:hover {
-  background-color: rgb(5, 21, 75)
-}
-
-.cancel:hover {
-  background-color: #a9a9a9
+.selected-btn {
+  background: white;
+  color: black;
 }
 
 .avg-table {
@@ -90,8 +37,31 @@ body {
 
 .avg-table-area {
   padding-top: 50px;
+  margin: 0px 10px;
 }
 
-.button-area {
-  padding-bottom: 50px;
+.table {
+  margin: 0px 10px;
+}
+
+.page-title {
+  font-size: 16px;
+}
+
+.menu-icon{
+  margin: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  .row .col.s4 {
+    width: calc((100% - (10px * 3)) / 3);
+    margin: 5px 5px 5px 5px;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .row .col.m2 {
+    width: calc((100% - (10px * 6)) / 6);
+    margin: 5px 5px 5px 5px;
+  }
 }

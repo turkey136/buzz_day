@@ -48,3 +48,7 @@
   font-size: 26px;
   padding-left: 20px;
 }
+
+.sidenav li>a:hover {
+  background-color: #424242;
+}

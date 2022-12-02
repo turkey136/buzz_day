@@ -27,7 +27,7 @@
         <a href="#" data-target="slide-out" class="sidenav-trigger navi-menu">
             <i class="material-icons menu-icon menu-icon-color">menu</i>
         </a>
-        <p class='page-title'>
+        <p class='page-title' id='title'>
             @yield('pageTitle')
         </p>
     </div>
