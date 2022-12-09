@@ -1,0 +1,54 @@
+.navi-menu {
+  margin-left: 10px;
+  position: absolute;
+  left: 0;
+}
+
+.page-title {
+  font-size: 24px;
+  color: white;
+  text-align: center;
+  margin: 10px;
+}
+
+.page-title-navi {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.sidenav {
+  background-color: black;
+}
+.sidenav li>a {
+  color: white;
+  font-size: 20px;
+}
+
+.sidenav li>a>i.material-icons {
+  color: white;
+  font-size: 36px;
+}
+
+.sidenav .subheader {
+  color: white;
+}
+
+.sub {
+  background-color: black;
+}
+
+.sub-menu-list li>a {
+  color: white;
+  font-size: 14px;
+}
+
+.sub-menu-list li>a>i.material-icons {
+  color: white;
+  font-size: 26px;
+  padding-left: 20px;
+}
+
+.sidenav li>a:hover {
+  background-color: #424242;
+}

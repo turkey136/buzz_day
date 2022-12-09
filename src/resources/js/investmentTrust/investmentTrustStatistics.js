@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', async function () {
   var typeStr = location.search.replace(/\?.+=/g, '');
   document.getElementById(`${typeStr}_button`).classList.remove('submit');
   document.getElementById(`${typeStr}_button`).textContent = 'グラフで見る';
+  document.getElementById(`${typeStr}_button`).classList.add('selected-btn');
   document.getElementById(`${typeStr}_button`).setAttribute('href', `/investment_trust_statistics_graph?kind_type=${typeStr}`);
 
   var yeaterday = new Date();

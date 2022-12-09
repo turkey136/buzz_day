@@ -48,7 +48,6 @@ document.addEventListener('DOMContentLoaded', async function () {
   this.getElementById('synchronized-date').textContent = `更新日： ${year}-${month}-${day} 23:00`;
   if ('all' !== typeStr) {
     this.getElementById('title').textContent = `投資信託（${kindType[typeStr]}）`;
-    this.getElementById('back').setAttribute('href', `/investment_trust_statistics?kind_type=${typeStr}`);
   }
 
   // CSV を解析
@@ -60,51 +59,55 @@ document.addEventListener('DOMContentLoaded', async function () {
       rows.push(splitrow);
       defData.push(
         {
-          "名前": splitrow[1],
-          "評価額": Number(splitrow[16]),
-          "前日比": Number(splitrow[17]),
+          name: splitrow[1],
+          x: Number(splitrow[16]),
+          y: Number(splitrow[17]),
+          z: 10,
         }
       )
       avgValue = avgValue + Number(splitrow[16]);
       avgDifferenc = avgDifferenc + Number(splitrow[17]);
-    } else if ('all' === typeStr) {
-      defData.push(
-        {
-          "名前": splitrow[1],
-          "評価額": Number(splitrow[16]),
-          "前日比": Number(splitrow[17]),
-          "種別": splitrow[13],
-        }
-      )
     }
   });
   avgValue = Math.floor(avgValue / rows.length);
   avgDifferenc = Math.floor(avgDifferenc / rows.length);
+  this.getElementById('avg_value').textContent = Number(avgValue).toLocaleString();
+  this.getElementById('avg_differenc').textContent = avgDifferenc;
 
   var loading = document.getElementById('loading');
   loading.style.setProperty('display', 'none');
 
+  Highcharts.chart('container', {
+    chart: {
+      type: 'bubble',
+      plotBorderWidth: 1,
+      zoomType: 'xy'
+    },
 
-  var chart = null;
-  if ('all' === typeStr) {
-    chart = new Taucharts.Chart({
-      data: defData,
-      type: 'scatterplot',
-      color: '種別',
-      x: '評価額',
-      y: '前日比',
-      plugins: [Taucharts.api.plugins.get('tooltip')(), Taucharts.api.plugins.get('legend')()],
-    });
-  } else {
-    chart = new Taucharts.Chart({
-      data: defData,
-      type: 'scatterplot',
-      x: '評価額',
-      y: '前日比',
-      plugins: [Taucharts.api.plugins.get('tooltip')(), Taucharts.api.plugins.get('legend')()],
-    });
-  }
+    legend: {
+      enabled: false,
+      floating: true,
+    },
 
-  chart.renderTo('#scatter');
+    title: {
+      text: ''
+    },
+
+    tooltip: {
+      useHTML: true,
+      headerFormat: '<table class="tooltip">',
+      pointFormat: '<tr><th colspan="6">{point.name}</th></tr>' +
+        '<tr><th>評価額:</th><td>{point.x}円</td></tr>' +
+        '<tr><th>前日差:</th><td>{point.y}円</td></tr>',
+      footerFormat: '</table>',
+      followPointer: true
+    },
+
+    series: [{
+      minSize: 10,
+      maxSize: 10,
+      data: defData
+    }]
+  })
 });
 
