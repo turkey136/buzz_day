@@ -66,7 +66,6 @@ class TweetTotallingSbiInvestmentTrust extends Command
 
         $connection = new TwitterOAuth($apiKey, $apiSecret, $accessToken, $accessTokenSecret);
         $connection->setApiVersion("2");
-        dd($tweetMessage);
         $result = $connection->post("tweets", ["text" => $tweetMessage], true);
     }
 
