@@ -44,6 +44,10 @@ mix.postCss('resources/css/investmentTrust/investmentTrustStatistics.css', 'publ
 mix.js('resources/js/investmentTrust/investmentTrustStatisticsGraph.js', 'public/js');
 mix.postCss('resources/css/investmentTrust/investmentTrustStatisticsGraph.css', 'public/css', []);
 
+// ETF Top
+mix.js('resources/js/etf/etfTop.js', 'public/js');
+mix.postCss('resources/css/etf/etfTop.css', 'public/css', []);
+
 // 小説
 mix.postCss('resources/css/novel/novelTop.css', 'public/css', []);
 mix.postCss('resources/css/novel/novelYomou.css', 'public/css', []);

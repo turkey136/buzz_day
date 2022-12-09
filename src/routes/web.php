@@ -47,6 +47,10 @@ Route::get('/porn', function () {
     return view('porn/top');
 })->name('porn.top');
 
+Route::get('/etf', function () {
+    return view('etf/etfTop');
+})->name('etf.top');
+
 Route::get('/sitemap.xml', 'App\Http\Controllers\SitemapController@sitemap')->name('sitemap.sitemap');
 
 Route::get('/', function () {

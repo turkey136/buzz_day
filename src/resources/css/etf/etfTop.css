@@ -1,0 +1,52 @@
+.flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.thumbnail {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  z-index: 2;
+}
+
+.synchronized-date {
+  margin: 0px 5px;
+  position: absolute;
+}
+
+.table {
+  padding-top:30px;
+  margin: 0px 10px;
+}
+
+.disclaimer-button {
+  margin-top: 30px;
+}
+
+.disclaimer {
+  font-size: xx-large;
+  color: red;
+}
+
+.btn {
+  background: black;
+}
+
+.btn:hover {
+  background: #424242;
+}
+
+@media screen and (max-width: 600px) {
+  .row .col.s4 {
+    width: calc((100% - (10px * 3)) / 3);
+    margin: 5px 5px 5px 5px;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .row .col.m2 {
+    width: calc((100% - (10px * 6)) / 6);
+    margin: 5px 5px 5px 5px;
+  }
+}
