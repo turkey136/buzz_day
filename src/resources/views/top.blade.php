@@ -43,8 +43,7 @@
                 </div>
               </div>
 
-              <!--
-                <div class="col s12 m4">
+              <div class="col s12 m4">
                 <div class="card">
                     <div class="card-content">
                         <span class="card-title">
@@ -58,7 +57,7 @@
                     </div>
                 </div>
               </div>
-              -->
+
               <!-- ローカルと本番で挙動が異なるので一旦閉じる
 
               <div class="col s12 m4">
