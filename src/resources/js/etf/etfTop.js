@@ -56,12 +56,15 @@ document.addEventListener('DOMContentLoaded', async function () {
   // table に CSV データから自動生成
   var table = document.getElementById('data-table-body');
   rows.forEach(function (row, index) {
-    if (row[1] === '' || row[2] === '' || row[1] === undefined) { return; }
+    if (row[1] === '' || row[2] === '' || row[1] === undefined || row[1] === '1626') { return; }
 
     var tr = document.createElement('tr');
     for (let key in tableIndex) {
       var td = document.createElement('td');
       let value = row[tableIndex[key]];
+      if (20 === tableIndex[key]) {
+        value = value + '<br><span class="money">(' + row[18] + ')</span>'
+      }
       td.innerHTML = value;
       tr.appendChild(td);
     }
