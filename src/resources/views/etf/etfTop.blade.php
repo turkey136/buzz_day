@@ -9,10 +9,10 @@
     <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{getenv('ADSENSE_CLIENT')}}" crossorigin="anonymous"></script>
 @endsection
 
-@section('keywords', '投資,ETF,海外株式,海外ETF,一覧,検索,ランキング')
-@section('description', '海外ETFの一覧')
-@section('title', '悪徳商会の工具箱:海外ETF一覧')
-@section('pageTitle', '海外一覧')
+@section('keywords', '投資,ETF,海外株式,海外ETF,一覧,検索,ランキング,Exchange Traded Funds,上場投信')
+@section('description', 'ETFの一覧')
+@section('title', '悪徳商会の工具箱:ETF一覧')
+@section('pageTitle', 'ETF一覧')
 
 @section('content')
     <div class="row" id='table-area'>
