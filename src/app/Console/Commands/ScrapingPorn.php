@@ -63,7 +63,7 @@ class ScrapingPorn extends Command
         $url = 'https://javmix.tv/' . $type . '/';
 
         $crawler = $client->request('GET', $url);
-        return $crawler->filter('a')->eq(17)->each(function ($node){
+        return $crawler->filter('a')->eq(18)->each(function ($node){
             return [
               'url' => $node->attr('href'),
               'title' =>  $node->filter('span')->eq(0)->text(),
