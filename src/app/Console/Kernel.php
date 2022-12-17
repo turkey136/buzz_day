@@ -74,6 +74,7 @@ class Kernel extends ConsoleKernel
       $schedule->command('command:tweetEtfDifference jpn')->dailyAt('19:45');
       $schedule->command('command:tweetEtfDifference kor')->dailyAt('19:50');
       $schedule->command('command:tweetEtfDifference hkg')->dailyAt('19:55');
+      $schedule->command('command:tweetEtfDifference all')->dailyAt('20:00');
 
       //
       $schedule->command('command:scrapingSbiInvestmentTrust')->everyFourHours();
