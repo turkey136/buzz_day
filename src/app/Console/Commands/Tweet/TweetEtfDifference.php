@@ -107,7 +107,7 @@ class TweetEtfDifference extends Command
     protected function buildMessage($dataToday, $differenc, $type)
     {
         $message = '';
-        if('' === $type) {
+        if('' !== $type) {
             $message = '🤖 昨日の #ETF 投資地域 が「 '.$type.' 」の商品で1週間で一番値上がりした商品だよ'.PHP_EOL.PHP_EOL;
         } else {
             $message = '🤖 昨日の #ETF の商品で1週間で一番値上がりした商品だよ'.PHP_EOL.PHP_EOL;
@@ -143,7 +143,7 @@ class TweetEtfDifference extends Command
 
         if (($handle = fopen($path, "r")) !== FALSE) {
             while (($data = fgetcsv($handle, 1000, ",")) !== FALSE) {
-                if(count($data) < 8 || $data[1] === '' || $data[2] === '' || $data[1] === '1626' || $data[7] !== $type) {
+                if(count($data) < 8 || $data[1] === '' || $data[2] === '' || $data[1] === '1626' || $data[7] !== $type || empty($data[20])) {
                   continue;
                 }
                 $csvData[$data[0]] = $data;
@@ -170,7 +170,7 @@ class TweetEtfDifference extends Command
       $differenc = '-100';
       foreach ($dataTodays as $indexCode => $data) {
           $data7dayAgo = $data7dayAgos[$indexCode];
-          if(empty($data7dayAgo)) { continue; }
+          if(empty($data7dayAgo) || empty($data[0])) { continue; }
 
           $tmpDifferenc = round($data[20] / $data7dayAgo[20] - 1, 5) * 100;
           if ($differenc <= $tmpDifferenc) {
