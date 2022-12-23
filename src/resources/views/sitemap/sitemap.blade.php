@@ -41,4 +41,12 @@
       <loc>{{ route('porn.top') }}</loc>
       <lastmod>{{ date("Y-m-d") }}</lastmod>
   </url>
+  <url>
+      <loc>{{ route('etf.top') }}</loc>
+      <lastmod>{{ date("Y-m-d") }}</lastmod>
+  </url>
+  <url>
+      <loc>{{ route('gold.top') }}</loc>
+      <lastmod>{{ date("Y-m-d") }}</lastmod>
+  </url>
 </urlset>
