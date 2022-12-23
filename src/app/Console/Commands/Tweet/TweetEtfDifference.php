@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Console\Commands;
+namespace App\Console\Commands\Tweet;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Carbon;
@@ -46,6 +46,7 @@ class TweetEtfDifference extends Command
         'jpn' => '日本',
         'kor' => '韓国',
         'hkg' => '香港',
+        'all' => 'All',
     ];
 
   /**
@@ -105,8 +106,12 @@ class TweetEtfDifference extends Command
 
     protected function buildMessage($dataToday, $differenc, $type)
     {
-        $message = '🤖 昨日の #ETF 投資地域 が「 '.$type.' 」の商品で1週間で一番値上がりした商品だよ'.PHP_EOL.PHP_EOL;
-
+        $message = '';
+        if('' === $type) {
+            $message = '🤖 昨日の #ETF 投資地域 が「 '.$type.' 」の商品で1週間で一番値上がりした商品だよ'.PHP_EOL.PHP_EOL;
+        } else {
+            $message = '🤖 昨日の #ETF の商品で1週間で一番値上がりした商品だよ'.PHP_EOL.PHP_EOL;
+        }
         $message = $message.'一番値上がりした商品は #'.$dataToday[22].' で1週間比は'.$differenc.'%らしいよ'.PHP_EOL.PHP_EOL;
 
         if ($differenc < 0) {
