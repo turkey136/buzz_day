@@ -22,7 +22,7 @@ class Kernel extends ConsoleKernel
         $schedule->command('command:scrapingNarou')->dailyAt('23:30');
         $schedule->command('command:scrapingSbiInvestmentTrust')->everyFourHours();
         $schedule->command('command:scrapingRakutenEtf')->everyFourHours();
-        $schedule->command('command:scrapingRakutenGold')->everyFourHours();
+        $schedule->command('command:scrapingGold')->dailyAt('10:00');
 
         // 情報の加工
         $schedule->command('command:totallingSbiInvestmentTrust')->dailyAt('1:00');
