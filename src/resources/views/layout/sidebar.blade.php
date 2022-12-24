@@ -22,6 +22,7 @@
             </li>
         </ul>
         <li><a href="/etf"><i class="material-icons menu-icon-color">local_atm</i>ETF</a></li>
+        <li><a href="/gold"><i class="material-icons menu-icon-color">local_atm</i>金・銀・プラチナ</a></li>
     </ul>
     <div class='page-title-navi'>
         <a href="#" data-target="slide-out" class="sidenav-trigger navi-menu">

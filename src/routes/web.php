@@ -51,6 +51,10 @@ Route::get('/etf', function () {
     return view('etf/etfTop');
 })->name('etf.top');
 
+Route::get('/gold', function () {
+    return view('gold/goldTop');
+})->name('gold.top');
+
 Route::get('/sitemap.xml', 'App\Http\Controllers\SitemapController@sitemap')->name('sitemap.sitemap');
 
 Route::get('/', function () {

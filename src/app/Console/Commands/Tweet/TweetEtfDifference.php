@@ -101,27 +101,25 @@ class TweetEtfDifference extends Command
 
         $connection = new TwitterOAuth($apiKey, $apiSecret, $accessToken, $accessTokenSecret);
         $connection->setApiVersion("2");
-        $result = $connection->post("tweets", ["text" => $tweetMessage], true);
+        $connection->post("tweets", ["text" => $tweetMessage], true);
     }
 
     protected function buildMessage($dataToday, $differenc, $type)
     {
         $message = '';
         if('' !== $type) {
-            $message = '🤖 昨日の #ETF 投資地域 が「 '.$type.' 」の商品で1週間で一番値上がりした商品だよ'.PHP_EOL.PHP_EOL;
+            $message = '🤖 昨日の #ETF 投資地域 が「 '.$type.' 」で1週間で一番値上がりした商品だよ'.PHP_EOL.PHP_EOL;
         } else {
             $message = '🤖 昨日の #ETF の商品で1週間で一番値上がりした商品だよ'.PHP_EOL.PHP_EOL;
         }
-        $message = $message.'一番値上がりした商品は #'.$dataToday[22].' で1週間比は'.$differenc.'%らしいよ'.PHP_EOL.PHP_EOL;
+        $message = $message.' #'.$dataToday[22].' で1週間比は'.$differenc.'%らしいよ'.PHP_EOL.PHP_EOL;
 
         if ($differenc < 0) {
             $message = $message.'え？一番よくてマイナスなの？'.PHP_EOL.PHP_EOL;
         } else if(10 < $differenc){
             $message = $message.'え？10%以上値上がりって...買っておけばよかった'.PHP_EOL.PHP_EOL;
         }
-
-        $afterMessage = '#'.$dataToday[3].'市場 で買えて'.$dataToday[6].'を運用している商品だね'.PHP_EOL;
-        $afterMessage = $afterMessage.'今の #評価額 は'.number_format($dataToday[20]).'('.$dataToday[18].')で #分配金利回り は'.$dataToday[19].'%なんだって';
+        $afterMessage = '今の #評価額 は'.number_format($dataToday[20]).'('.$dataToday[18].')で #分配金利回り は'.$dataToday[19].'%なんだって';
 
         return $message.PHP_EOL.$afterMessage.PHP_EOL.PHP_EOL.'';
     }
@@ -169,6 +167,9 @@ class TweetEtfDifference extends Command
       $code = '';
       $differenc = '-100';
       foreach ($dataTodays as $indexCode => $data) {
+
+          if (!array_key_exists($indexCode, $data7dayAgos)) { continue; }
+
           $data7dayAgo = $data7dayAgos[$indexCode];
           if(empty($data7dayAgo) || empty($data[0])) { continue; }
 
