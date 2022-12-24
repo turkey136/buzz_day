@@ -99,7 +99,6 @@ class ScrapingGold extends Command
     private function getJsonData($getDate)
     {
         $url = 'https://www.net-japan.co.jp/system/upload/netjapan/export/price_'.$getDate.'.json';
-        print $url;
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
