@@ -80,7 +80,8 @@ document.addEventListener('DOMContentLoaded', async function () {
   });
 
   $('#data-table').DataTable({
-    "displayLength": 300
+    "displayLength": 300,
+    'order': [[0, 'desc']],
   });
 
   var loading = document.getElementById('loading');

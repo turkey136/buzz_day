@@ -58,6 +58,21 @@
                 </div>
               </div>
 
+              <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">
+                            金・銀
+                        </span>
+                        <i class="material-icons large">local_atm</i>
+                            <p>金・銀の評価額</p>
+                    </div>
+                    <div class="card-action top-card-action-link">
+                        <a href="/gold">View</a>
+                    </div>
+                </div>
+              </div>
+
               <!-- ローカルと本番で挙動が異なるので一旦閉じる
 
               <div class="col s12 m4">
