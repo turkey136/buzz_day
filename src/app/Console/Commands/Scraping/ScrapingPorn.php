@@ -59,60 +59,72 @@ class ScrapingPorn extends Command
 
     private function scrapingJavmix($type)
     {
-        $client = new Client(HttpClient::create(['timeout' => 100]));
-        $url = 'https://javmix.tv/' . $type . '/';
+      try {
+          $client = new Client(HttpClient::create(['timeout' => 100]));
+          $url = 'https://javmix.tv/' . $type . '/';
 
-        $crawler = $client->request('GET', $url);
-        return $crawler->filter('a')->eq(18)->each(function ($node){
-            return [
-              'url' => $node->attr('href'),
-              'title' =>  $node->filter('span')->eq(0)->text(),
-              'img' => $node->filter('img')->eq(0)->attr('src'),
-              'owner' => 'unknown',
-              'owner_url' => 'nonthing'
-            ];
-        })[0];
+          $crawler = $client->request('GET', $url);
+          return $crawler->filter('a')->eq(18)->each(function ($node){
+              return [
+                'url' => $node->attr('href'),
+                'title' =>  $node->filter('span')->eq(0)->text(),
+                'img' => $node->filter('img')->eq(0)->attr('src'),
+                'owner' => 'unknown',
+                'owner_url' => 'nonthing'
+              ];
+          })[0];
+      } catch ( Exception $ex ) {
+          //例外が発生しても握りつぶして次に進
+      }
     }
 
     private function scrapingTkTube($type)
     {
-        $client = new Client(HttpClient::create(['timeout' => 100]));
-        $url = '';
-        if ('viewed' === $type ) {
-            $url = 'https://www.tktube.com/most-popular/?mode=async&function=get_block&block_id=list_videos_common_videos_list&sort_by=video_viewed_today';
-        } else if ('rating' === $type) {
-            $url = 'https://www.tktube.com/top-rated/?mode=async&function=get_block&block_id=list_videos_common_videos_list&sort_by=rating_today';
-        }
+        try {
+            $client = new Client(HttpClient::create(['timeout' => 100]));
+            $url = '';
+            if ('viewed' === $type ) {
+                $url = 'https://www.tktube.com/most-popular/?mode=async&function=get_block&block_id=list_videos_common_videos_list&sort_by=video_viewed_today';
+            } else if ('rating' === $type) {
+                $url = 'https://www.tktube.com/top-rated/?mode=async&function=get_block&block_id=list_videos_common_videos_list&sort_by=rating_today';
+            }
 
-        $crawler = $client->request('GET', $url);
-        return $crawler->filter('a')->eq(3)->each(function ($node){
-            return [
-              'url' => $node->attr('href'),
-              'title' => $node->filter('strong')->eq(0)->text(),
-              'img' => $node->filter('img')->eq(0)->attr('src'),
-              'owner' => 'unknown',
-              'owner_url' => 'nonthing'
-            ];
-        })[0];
+            $crawler = $client->request('GET', $url);
+            return $crawler->filter('a')->eq(3)->each(function ($node){
+                return [
+                  'url' => $node->attr('href'),
+                  'title' => $node->filter('strong')->eq(0)->text(),
+                  'img' => $node->filter('img')->eq(0)->attr('src'),
+                  'owner' => 'unknown',
+                  'owner_url' => 'nonthing'
+                ];
+            })[0];
+        } catch ( Exception $ex ) {
+            //例外が発生しても握りつぶして次に進
+        }
     }
 
     private function scrapingPornHub($production, $country, $type)
     {
-        $client = new Client(HttpClient::create(['timeout' => 100]));
-        $url = 'https://jp.pornhub.com/video?o=' . $type . '&p=' . $production;
-        if ("" !== $country) {
-            $url = $url . '&cc=' . $country;
-        }
-        $crawler = $client->request('GET', $url);
+        try {
+          $client = new Client(HttpClient::create(['timeout' => 100]));
+          $url = 'https://jp.pornhub.com/video?o=' . $type . '&p=' . $production;
+          if ("" !== $country) {
+              $url = $url . '&cc=' . $country;
+          }
+          $crawler = $client->request('GET', $url);
 
-        return $crawler->filter('#videoCategory')->filter('li')->eq(1)->each(function ($node){
-            return [
-              'url' => 'https://jp.pornhub.com'. $node->filter('a')->eq(0)->attr('href'),
-              'title' => $node->filter('img')->eq(0)->attr('alt'),
-              'img' => $node->filter('img')->eq(0)->attr('data-mediumthumb'),
-              'owner' => $node->filter('a')->eq(2)->text(),
-              'owner_url' => 'https://jp.pornhub.com'. $node->filter('a')->eq(2)->attr('href')
-            ];
-        })[0];
+          return $crawler->filter('#videoCategory')->filter('li')->eq(1)->each(function ($node){
+              return [
+                'url' => 'https://jp.pornhub.com'. $node->filter('a')->eq(0)->attr('href'),
+                'title' => $node->filter('img')->eq(0)->attr('alt'),
+                'img' => $node->filter('img')->eq(0)->attr('data-mediumthumb'),
+                'owner' => $node->filter('a')->eq(2)->text(),
+                'owner_url' => 'https://jp.pornhub.com'. $node->filter('a')->eq(2)->attr('href')
+              ];
+          })[0];
+        } catch ( Exception $ex ) {
+            //例外が発生しても握りつぶして次に進
+        }
     }
 }
