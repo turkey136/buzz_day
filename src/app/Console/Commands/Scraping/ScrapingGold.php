@@ -31,7 +31,7 @@ class ScrapingGold extends Command
         $year = $this->argument('year') ?? date('Y');
         $month = $this->argument('month');
         $fromMonth = '01';
-        $toMonth = '12';
+        $toMonth = date('m');
         if(!empty($month)) {
             $fromMonth = $month;
             $toMonth = $month;
@@ -99,6 +99,7 @@ class ScrapingGold extends Command
     private function getJsonData($getDate)
     {
         $url = 'https://www.net-japan.co.jp/system/upload/netjapan/export/price_'.$getDate.'.json';
+
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
