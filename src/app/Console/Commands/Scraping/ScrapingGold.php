@@ -31,14 +31,14 @@ class ScrapingGold extends Command
         $year = $this->argument('year') ?? date('Y');
         $month = $this->argument('month');
         $fromMonth = '01';
-
+        $toMonth = date('m');
         if(!empty($month)) {
                 $toMonth = $month;
         } else {
           if (date('Y') == $year) {
             $toMonth = date('m');
           } else {
-             $toMonth = 12;
+            $toMonth = 12;
           }
         }
         $from = new Carbon($year.'-'.$fromMonth.'-01');
