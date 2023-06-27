@@ -136,7 +136,7 @@ class TweetEtfDifference extends Command
 
     protected function loadCsv($date, $type) {
         $row = 1;
-        $path =  base_path('storage/app/public/rakuten_etf/'.$date->year.'/'.$date->month.'/'.$date->format('Ymd').'.csv');
+        $path =  base_path('storage/app/public/rakuten_etf/'.$date->year.'/'.sprintf('%02d',$date->month).'/'.$date->format('Ymd').'.csv');
         $csvData = [];
 
         if (($handle = fopen($path, "r")) !== FALSE) {
